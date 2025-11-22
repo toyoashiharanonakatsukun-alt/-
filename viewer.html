@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <div id="content">読み込み中...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('src') || 'paper1.md';
+
+    fetch(src)
+      .then(res => res.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+        MathJax.typeset();
+      });
+  </script>
+</body>
+</html>
