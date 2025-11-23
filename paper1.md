@@ -4,6 +4,8 @@
 
 **Integrative Ethics Philosophy as the Overcoming of Dualism: A Theoretical Reconstruction of Resonance, Simultaneity, and Generative Indeterminacy**
 
+Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
+
 ### 概要（Abstract）
 
 本論文は、従来の倫理哲学における「善と悪」「秩序と混沌」といった二元的構造を超克し、両者を同時的かつ相補的な生成プロセスとして再統合する統合倫理哲学（Integrative Ethics Philosophy）の理論的基盤を提示する。本哲学は、次の三つの主要な理論的構成要素の再定義を通じて、現代の倫理的閉塞状況を打破する。
@@ -356,6 +358,7 @@ Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
 中村雄二郎『共通感覚論』岩波書店、1990年。
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
 
 
 
