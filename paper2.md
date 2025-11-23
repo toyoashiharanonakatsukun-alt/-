@@ -2,6 +2,8 @@
 
 # 統合倫理哲学の応用実務設計
 
+Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
+
 ## 1. 目的と主要な貢献 (Purpose and Key Contributions)
 
 本論文は、従来の倫理学における静的な二元論（善／悪、秩序／混沌）を超克し、動的で生成的な倫理評価枠組みを提供する統合倫理哲学の理論的基盤を強化し、応用可能性と実務に供する基盤を整えることを目的とする。
