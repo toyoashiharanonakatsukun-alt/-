@@ -2,7 +2,7 @@
 
 ## 統合倫理哲学 (Integrative Ethics Philosophy)：共鳴・同時性・生成不確定性の理論的再構成
 
-**Integrative Ethics Philosophy as the Transcendence of Dualism: A Theoretical Reconstruction of Resonance, Simultaneity, and Generative Indeterminacy**
+**Integrative Ethics Philosophy: A Theoretical Reconstruction of Resonance, Simultaneity, and Generative Indeterminacy**
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
@@ -362,6 +362,7 @@ Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
 中村雄二郎『共通感覚論』岩波書店、1990年。
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
 
 
 
