@@ -10,7 +10,7 @@ Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
 本論文は、従来の倫理哲学における「善と悪」「秩序と混沌」といった二元的構造を超越し、両者を同時的かつ相補的な生成プロセスとして再統合する統合倫理哲学（Integrative Ethics Philosophy）の理論的基盤を提示する。本哲学は、次の三つの主要な理論的構成要素の再定義を通じて、現代の倫理的閉塞状況を打破する。
 
-*   **Principle: 共鳴的連関（Resonance Nexus）:** 倫理の場を、一対一の接触から大規模なパタンまで、柔軟に変化し維持される「応答の基盤」として捉え直す。
+*   **Principle: 共鳴原理(Principle of Resonance):** 倫理の場を、一対一の接触から大規模なパタンまで、柔軟に変化し維持される「応答の基盤」である共鳴的連関（Resonance Nexus）として捉え直す。
 *   **Principle: 同時性原理（Principle of Simultaneity）:** 創造と破壊、倫理的側面と非倫理的側面が不可分かつ同時に発生するという構造を承認する。
 *   **Ax. GI (生成不確定性の公理: Axiom of Generative Indeterminacy):** 未来の予測不能性を倫理的生成の機会とみなし、これに対する常時的責任を理論の中心に置く。
 
@@ -358,6 +358,7 @@ Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
 中村雄二郎『共通感覚論』岩波書店、1990年。
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
 
 
 
