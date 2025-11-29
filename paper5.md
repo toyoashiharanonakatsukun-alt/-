@@ -224,3 +224,7 @@ GSEは、以下の三点を同時に達成しました。
 GSEは、従来の倫理体系とは異なり、善や悪、苦痛、幸福、逃避動機を前提とせず、**存在そのものの生成力**を倫理源泉にする人類史上初の公理的体系です。倫理学の枠組みは脱構築され、GSEは、哲学の枠を超えた全く新しい**生成規範学（Generative Normativity）**の基礎理論となります。
 
 **生成システム倫理学（GSE）は、既存倫理学の終焉と、新たな学問領域の始まりを宣言する体系です。**
+
+参考文献：Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+
+© 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
