@@ -1,6 +1,6 @@
 ## 生成システム倫理学（Generative Systems Ethics: GSE）：
 
-
+Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
 ## 0. 序論：倫理的特異点への無矛盾な超越を目指して
 現代は倫理の相対化（文化・宗教・学派の相互不整合）が進み、倫理学は普遍性を喪失しています。
