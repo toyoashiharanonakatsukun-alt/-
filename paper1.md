@@ -362,24 +362,9 @@ Bruno Latour, We Have Never Been Modern, Harvard Univ. Press, 1993.
 Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
 和辻哲郎『倫理学』岩波書店、1937年。
 中村雄二郎『共通感覚論』岩波書店、1990年。
+高橋和則「エドマンド・バークの政治思想」博士論文（中央大学）、 2017年3月。
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
