@@ -718,5 +718,19 @@ RBA要請: 産業界に対し、過去の利益をすべて吐き出してでも
 倫理的成熟とは、完全な秩序の獲得ではなく、避け得ぬ悪（個別要素）を引き受け、応答を続けることを核心とみなす、人間存在の哲学（Philosophy of Generative Being）として構想される。本哲学は、人類の生存が継続する限り普遍的に適用される「制約」として機能する。
 
 
+ 　
 
+### 参考文献
+
+Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+Hans Jonas, The Imperative of Responsibility, Univ. of Chicago Press, 1984.
+Emmanuel Levinas, Totality and Infinity, Nijhoff, 1961.
+Nel Noddings, Caring, Univ. of California Press, 1984.
+Bruno Latour, We Have Never Been Modern, Harvard Univ. Press, 1993.
+Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
+和辻哲郎『倫理学』岩波書店、1937年。
+中村雄二郎『共通感覚論』岩波書店、1990年。
+高橋和則「エドマンド・バークの政治思想」博士論文（中央大学）、 2017年3月。
+
+© 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
 
