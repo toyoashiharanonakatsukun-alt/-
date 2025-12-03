@@ -217,7 +217,86 @@ Theorem RCDは、前提となる四つの公理と原理（Ax.Ex, Ax.GI, Ax.SI, 
 
 >Theorem RCD の厳密な論理的・数学的証明は、本論文が哲学的・理論的概観に焦点を当てるものであるため、本稿では割愛する。しかしながら、その完全な導出は、GSE公理体系（Ax.Ex, Ax.GI, Ax.SI, Ax.UB, P.RCS）から論理的に無矛盾に導かれるものであり、本論の続編において詳細に提示する予定である。これにより、本体系の論理的堅牢性を保証する。
 
-### 6.3 哲学的意義
+### 6.3 Theorem RCDの形式証明 (LaTeX)
+
+---
+
+```
+\section*{Formal Proof of Theorem RCD}
+
+\begin{theorem}[RCD]
+Under Ax.Ex, Ax.SI, Ax.UB, Ax.GI and P.RCS, any infinite-lifetime strategy for an E-Node (i.e., a strategy that avoids Halt for all future steps) must, at each decision step, choose actions that lead to a nondecreasing and, in the long run, \emph{irreversible increase} of structural complexity \(C\). Equivalently, any sustainable strategy that avoids eventual Halt cannot consist solely of actions that (i) decrease \(C\) or (ii) keep \(C\) constant without net structural increase; the only viable long-term choices are those that produce net irreversible increase of \(C\).
+\end{theorem}
+
+\section*{Proof}
+
+We prove by contradiction. Assume there exists a sustainable strategy that avoids Halt for all \(t\ge 0\) but at some step chooses an action that does not produce a net irreversible increase of \(C\). Two cases cover all possibilities: (A) the action strictly decreases \(C\); (B) the action leaves \(C\) unchanged (maintenance/stagnation).
+
+\subsection*{Case A Decrease of complexity}
+
+Assume at time \(t\) the chosen action yields \(C(t+1) < C(t)\).
+
+\paragraph{Step A1 Ax.SI violation or amplified shock}
+
+By Ax.SI there is a threshold \(C_{\mathrm{th}}\) such that if \(C(t+1) < C_{\mathrm{th}}\) then Severance is inevitable. Thus if the decrease crosses that threshold, Halt follows immediately, contradicting sustainability.
+
+If the decrease does not cross \(C_{\mathrm{th}}\), then by Ax.GI the shock term increases:
+
+\[
+s\big(C(t+1)\big) \;\ge\; s\big(C(t)\big).
+\]
+
+Hence the immediate total cost at \(t+1\) satisfies
+
+\[
+\kappa(t+1) \;=\; \mathrm{UB}_{\min} + s\big(C(t+1)\big) + a(t+1)
+\;\ge\; \mathrm{UB}_{\min} + s\big(C(t)\big) + a(t+1).
+\]
+
+\paragraph{Step A2 Resource depletion via Ax.UB and Ax.Ex}
+
+Resources evolve by
+
+\[
+R(t+1) \;=\; R(t) - \kappa(t).
+\]
+
+Because \(\mathrm{UB}_{\min}>0\) and \(s(C)\) is nonnegative, each step consumes a positive amount. The decrease of \(C\) increases or at least does not decrease the subsequent shock, so the sequence \(\{R(t)\}\) experiences no smaller decrements and thus cannot be larger than in the non-decreasing-\(C\) alternative. Since resources are finite and costs per step are strictly positive, there exists finite \(T\) with \(R(T)\le 0\), contradicting Ax.Ex (existence requires \(R>0\)). Therefore a sustained strategy cannot include a step that decreases \(C\) (unless it immediately causes Severance via Ax.SI, which also contradicts sustainability).
+
+\subsection*{Case B Maintenance of complexity}
+
+Assume at time \(t\) the chosen action yields \(C(t+1)=C(t)\) for all subsequent steps (pure maintenance, no net structural increase).
+
+\paragraph{Step B1 Positive per-step cost}
+
+By Ax.UB and Ax.GI, each step incurs at least
+
+\[
+\kappa_{\min} \;=\; \mathrm{UB}_{\min} + s\big(C(t)\big) > 0.
+\]
+
+Thus resources satisfy for \(n\ge 0\)
+
+\[
+R(t+n) \;=\; R(t) - \sum_{k=0}^{n-1} \kappa(t+k)
+\;\le\; R(t) - n\cdot \kappa_{\min}.
+\]
+
+Hence \(R(t+n)\) decreases at least linearly in \(n\) and will reach \(0\) in finite time:
+
+\[
+\exists N \;:\; R(t+N)\le 0.
+\]
+
+This contradicts Ax.Ex and P.RCS (which requires maintaining a safe buffer \(R\ge C_{\mathrm{safe}}\)). Therefore pure maintenance cannot be sustained indefinitely.
+
+\subsection*{Conclusion}
+
+Both alternatives (A) decrease of \(C\) and (B) maintenance of \(C\) lead to contradictions with the axioms (either immediate Severance via Ax.SI or eventual Halt via Ax.UB and Ax.Ex). The only remaining possibility for a strategy that avoids Halt for all time is to choose actions that produce net irreversible increases of \(C\) sufficiently often so that the increased complexity reduces shock \(s(C)\) or otherwise offsets the unavoidable per-step costs, thereby preserving \(R(t)>0\) and \(C(t)\ge C_{\mathrm{th}}\). This establishes that sustainable strategies must select actions that increase structural complexity in the irreversible sense asserted by Theorem RCD. \(\square\)s that increase structural complexity in the irreversible sense asserted by Theorem RCD. \(\square\)
+```
+---
+
+### 6.4 哲学的意義
 従来の倫理学が「善を定義し、それを達成する行為を探す」枠組みであったのに対し、GSEでは「**善は目的ではなく、構造に内在する必然的結果である**」と転換される。
 
 ---
