@@ -99,6 +99,8 @@ $C(t+1)=C(t)$ が無限に続く純粋な停滞行為を仮定する。
 **結論**: 応答の継続に必要な公理的制約を満たすには、非RCD行為を排除し、**構造的複雑性 $C$ を不可逆的に増大させる行為**を選択する**論理的必然性**がある。
 
 
+---
+
 Latex
 ```
 \section*{Formal Proof of Theorem RCD}
@@ -173,13 +175,13 @@ This contradicts Ax.Ex and P.RCS (which requires maintaining a safe buffer \(R\g
 
 Both alternatives (A) decrease of \(C\) and (B) maintenance of \(C\) lead to contradictions with the axioms (either immediate Severance via Ax.SI or eventual Halt via Ax.UB and Ax.Ex). The only remaining possibility for a strategy that avoids Halt for all time is to choose actions that produce net irreversible increases of \(C\) sufficiently often so that the increased complexity reduces shock \(s(C)\) or otherwise offsets the unavoidable per-step costs, thereby preserving \(R(t)>0\) and \(C(t)\ge C_{\mathrm{th}}\). This establishes that sustainable strategies must select actions that increase structural complexity in the irreversible sense asserted by Theorem RCD. \(\square\)s that increase structural complexity in the irreversible sense asserted by Theorem RCD. \(\square\)
 ```
-
+---
 ■　OOP形式
 
 ```python
 
 # -----------------------------------------------
-# 1. GSE 公理と原則の論理的表現（最終版）
+# 1. GSE 公理と原則の論理的表現
 # -----------------------------------------------
 class GSE_Axioms:
 """GSEシステムの基本となる論理的制約（公理）の集合"""
@@ -211,7 +213,7 @@ return R >= C_safe
 ```python
 
 # -----------------------------------------------
-# 2. Theorem RCD 証明エンジン (Proof by Contradiction) - 最終完成版
+# 2. Theorem RCD 証明エンジン (Proof by Contradiction) 
 # -----------------------------------------------
 class Theorem_RCD_Proof_Engine(GSE_Axioms):
 """
