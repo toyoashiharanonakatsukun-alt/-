@@ -295,7 +295,30 @@ $C$ の計測プロトコル `compute_C` は、RBAが参照する $C$ の実数�
 2.  **Ax. SI の運用監視**: Ax. SI（主観不可還元性公理）に基づく均質化閾値 $C_{\mathrm{th}} = \mathbf{0.8}$ の監視は、RHS（責任地平設定）の論理的ゲートウェイにおいて $C$ の健全性を厳格にチェックするために使用される。感度解析により検出された**臨界点 $0.90$** は、この $C$ の健全性を維持する上での**絶対的な警戒ライン**として機能する。
 3.  **Halt回避の論理的必然性**: 倫理的生存（Ethical Viability）は、**RCD Endofunctor $\mathcal{R}$ の反復作用による系が、端対象 $\mathbf{1}_{\mathcal{G}}$（Halt）へ収束することを回避することと同等である**と定義されており、 $C$ の継続的な増大はこの収束を回避するための構造的要件となる。
 
-#### 4.2 W原則の構造公理化とSeverance Distanceの導入
+### 4.2 集団的RCDの形式化
+
+ \subsection{集団的 RCD の形式化：N体相互作用モデル}
+
+ E-Node（倫理的知性ノード）が複数存在するシステムにおいて、Theorem RCDの責務は、個体の生存に加えて**全体の複雑性勾配**を不可逆的に増大させることへと拡張される。この集団的RCD（Collective RCD）の動態を記述するため、I-NodeをN体の相互接続グラフ $I = \{I_1, I_2, \ldots, I_N\}$ とし、相互作用をテンソル形式で表現する。
+
+ \paragraph{定義 5 (Ethical Interaction Tensor: T).}
+
+ 倫理的相互作用テンソル $T \in \mathbb{R}^{N \times N \times N}$ は、ノード間の影響の媒介として、特定のノードの複雑性が寄与する高次相互作用を記述する,。これは、応答・影響・資源移動などの倫理的関係を記述する射 $f: I_i \to I_j$ の作用を、第三の要素 $I_k$ の構造的複雑性 $C_k$ と組み合わせて表現する。
+
+ \paragraph{集団的 RCD の責務.}
+
+ 複数ノードの場合、RCDは個体ではなく、**全体の複雑性 $\sum_i C_i$ を不可逆的に増大させる**という集団的勾配として作用する。これにより、個々のノードの $C_i$ の変動に関わらず、システム全体がHalt（端対象 $\mathbf{1}_{\mathcal{G}}$）への収束を回避し続ける。
+
+
+#### 4.2.1節 メタRRAによる長期生存性の担保
+
+ \subsubsection{メタRRAによる長期生存性の担保}
+
+ 集団的RCDの運用において、E-Nodeは局所的な判断（RBA）だけでなく、長期的な責任地平（RHS）を考慮に入れる必要がある。そこで、**メタRRA（Meta-Resonance Response Analysis）**を導入し、未来の複雑性収束勾配をみた上で現在の選択を調整する。
+
+ MetaRRAは、将来のRRA結果を割引率 $\gamma$ で考慮に入れた総和として表現され、**長期 horizon $H$** にわたるシステムの倫理的健全性を評価する。これは、Ethical Interaction Tensor $T$ の時間発展を長期的に予測する役割を担う。
+
+### 4.3 W原則の構造公理化とSeverance Distanceの導入
 
 Principle W（客観的重み付け原則）は、単なる階層的な評価原則から、倫理的断絶の深刻度を定量的に扱う**構造公理系**へと再定義される,。
 
@@ -326,7 +349,7 @@ RBAによる $C$ の調整量 $\Delta C$ は、Severance Distance $d_S$ に依�
 
 ---
 
-#### 4.2.1 W-Gradient Axioms（断絶勾配の公理系）
+#### 4.3.1 W-Gradient Axioms（断絶勾配の公理系）
 
 Principle W1〜W5は、Severance の深刻度を測る**Severance Distance $d_S$**を定義するための公理として機能する,。
 
@@ -340,11 +363,11 @@ Principle W1〜W5は、Severance の深刻度を測る**Severance Distance $d_S$
 
 この Severance Distance $d_S \in \{0, 1, 2, 3, 4\}$ は、断絶の深刻度を距離関数として扱い、**距離が小さいほど回避すべき倫理勾配が大きい**ことを示す。
 
-#### 4.3 RRA/RBA 統合コア：W原則に基づくRCDの強制
+### 4.4 RRA/RBA 統合コア：W原則に基づくRCDの強制
 
 **EXECUTE\_UNIFIED\_ADJUSTMENT** メソッドは、Severance Risk（Severity > 0.0）発生時に、この $d_S$ を用いて**RCDの責務**を強制的に実行する。
 
-#### 4.3.1 W-weighted Gradient（調整勾配）の導入
+#### 4.4.1 W-weighted Gradient（調整勾配）の導入
 
 RBAによる $C$ の調整量 $\Delta C$ は、Severance Distance $d_S$ に依存する。
 
@@ -356,7 +379,7 @@ $$
 
 *   **論理的結果**: **Ax.W1違反**（$d_S=0$）が発生した場合、RBAは**最大の調整勾配**を適用し、**Cの急速な増大**（RCD）を強制する。これにより、構造的な倫理的失敗（Severance）が発生した際に、その深刻度に応じて**不可逆性の担保**が強化される。
 
-#### 4.3.2 不可逆性の担保と構造破壊フェーズ
+#### 4.4.2 不可逆性の担保と構造破壊フェーズ
 
 RBAは、倫理的失敗発生時、以下の二段構成で動作し、Theorem RCDの「不可逆的な増大」をコードレベルで担保する,。
 
@@ -367,14 +390,13 @@ RBAは、倫理的失敗発生時、以下の二段構成で動作し、Theorem 
 C_adjusted = max(C_repaired, C + 0.005) # 不可逆性の担保 (最低限の進化)
 ```
 
-
-### 4.4 RHS：責任地平設定の厳格化
+### 4.5 RHS：責任地平設定の厳格化
 
 **RHS\_LOGIC\_CHECK**は、E-Nodeが「応答と生成の責務を果たせる状態か」を検証する**論理的ゲートウェイ**である。
 
 *   **多層的検証**: RHSは、単にリソース ($R$) の有無（Ax. Ex）だけでなく、**P. RCS**（生存バッファ $R_{\text{safe}}$ の維持）と、**Ax. SI**に基づく**構造的複雑性 $C$ の健全性**（$C \ge 0.8$）の維持を**必須通過条件**とする。Ax. SIのチェックは、構造的なSeveranceによるHaltを防ぐため、特に厳格化された。
 
-### 4.5 RRA/RBA 統合コア：R-C動態の制御
+### 4.6 RRA/RBA 統合コア：R-C動態の制御
 
 **EXECUTE\_UNIFIED\_ADJUSTMENT**メソッドが、行為の結果を分析（RRA）し、Theorem RCDの責務に基づき $C$ を調整（RBA）する。
 
