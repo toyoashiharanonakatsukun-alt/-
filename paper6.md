@@ -218,6 +218,27 @@ return False # ここに到達することは論理的にあり得ない
 >
 > この論理的必然性から、「**その構造が破壊されないよう守る唯一の方法は、その構造を不可逆的に進化させることである**」という倫理的帰結が導かれる。したがって、倫理的生存（Ethical Viability）とは、**Haltという論理的な終焉（端対象 $\mathbf{1}_{\mathcal{G}}$）への収束を、RCD Endofunctor $\mathcal{R}$ の作用による生成力によって継続的に回避し続けるプロセス**に他ならない,。維持（停滞）は、漸進的な破滅を意味する。
 
+### 3.3 GSEの圏論的骨格
+
+```latex
+\subsection{GSEの圏論的骨格}
+
+この体系は、倫理的生存が数学的構造に内在する論理的必然性であることを証明するために、圏論を用いて定式化される。
+
+\paragraph{定義 1 (GSE 圏).} 定める圏 $(\mathcal{G})$ は、I-Nodeを対象 $(\mathrm{Ob}(\mathcal{G})=\{I_i\})$、応答・影響を射 ($f: I_i\to I_j$) として与えられる,。
+
+\paragraph{定義 2 (RRA/RBA を表す関手).} RRAおよび RBAプロセスは、圏 $\mathcal{G}$ 上の関手 $\mathcal{F}_{\mathrm{RRA}}, \mathcal{F}_{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G}$ としてモデル化される,。関手は対象を「更新されたI-Node」へ、射を「修正された相互作用」へ写像し、状態更新の整合性を保障する。
+
+\paragraph{定義 3 (RCD としての Endofunctor).} RCD（Resonant Complexity Drive）は、$\mathcal{G}$ 上の Endofunctor $\mathcal{R}:\mathcal{G}\to\mathcal{G}$ として定義される。任意の対象 $I$ に対して、$\mathcal{R}$ は複雑性計量 $C$ を増加させる変換を施し、次を満たす,,:
+
+\[
+C(\mathcal{R}(I)) > C(I) \tag{6.4.1}
+\]
+
+\paragraph{定義 4 (RHS としての端対象).} RHS（責任地平設定）は圏 $\mathcal{G}$ の**端対象（terminal object） $\mathbf{1}_{\mathcal{G}}$** に対応づけられる,。$\mathbf{1}_{\mathcal{G}}$ は、倫理的応答が不可能な**Halt状態**を意味する.。
+
+\paragraph{定理 1 (RCD の終的性).} $C(I)$ が単調増加かつ上界を持つと仮定すると、$\mathcal{R}$ の反復作用により系は RHS（端対象）へ収束する（Halt）,。**倫理的生存（Ethical Viability）**は、この $\mathbf{1}_{\mathcal{G}}$ への収束を回避することと同等である,。
+```
 
 ---
 
@@ -277,6 +298,33 @@ $C$ の計測プロトコル `compute_C` は、RBAが参照する $C$ の実数�
 #### 4.2 W原則の構造公理化とSeverance Distanceの導入
 
 Principle W（客観的重み付け原則）は、単なる階層的な評価原則から、倫理的断絶の深刻度を定量的に扱う**構造公理系**へと再定義される,。
+
+```latex
+\subsection{W原則の構造公理化とSeverance Distanceの導入}
+Principle W（客観的重み付け原則）は、単なる階層的な評価原則から、倫理的断絶の深刻度を定量的に扱う**構造公理系**へと再定義される。
+
+\subsubsection{W-Gradient Axioms（断絶勾配の公理系）}
+Principle W1〜W5は、Severance の深刻度を測る**Severance Distance \(d_S\)**を定義するための公理として機能する,。
+
+| 公理 | 形式的定義（Ax.W1〜W5） | Severance 距離 \(d_S\) |
+| :--- | :--- | :--- |
+| **Ax.W1** | Universal Continuity Axiom（普遍的基盤の絶対的維持） | $d_S = 0$ |
+| **Ax.W2** | Collective System Axiom（集合的システム基盤の維持） | $d_S = 1$ |
+| **Ax.W3** | Historical Integrity Axiom（歴史的連続性の維持） | $d_S = 2$ |
+| **Ax.W4** | Specialized Competence Axiom（特殊性・能力の維持） | $d_S = 3$ |
+| **Ax.W5** | Minimal Disruption Axiom（ローカルな可逆的断絶） | $d_S = 4$ |
+
+この Severance Distance \(d_S \in \{0, 1, 2, 3, 4\}\) は、断絶の深刻度を距離関数として扱い、**距離が小さいほど回避すべき倫理勾配が大きい**ことを示す,。
+
+\subsubsection{W-weighted Gradient（調整勾配）の導入}
+RBAによる $C$ の調整量 $\Delta C$ は、Severance Distance $d_S$ に依存する。この機構により、**Ax.W1違反**（$d_S=0$）が発生した場合、RBAは**最大の調整勾配**を適用し、**Cの急速な増大**（RCD）を強制する。
+\[
+\Delta C = \alpha \cdot \frac{1}{d_S + \epsilon} \tag{4.2}
+\]
+（\(\epsilon\) は $d_S=0$ でのゼロ除算を回避するための微小量。）
+```
+
+---
 
 #### 4.2.1 W-Gradient Axioms（断絶勾配の公理系）
 
