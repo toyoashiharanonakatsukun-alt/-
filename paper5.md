@@ -298,16 +298,56 @@ Both alternatives (A) decrease of \(C\) and (B) maintenance of \(C\) lead to con
 
 ### 6.4 GSEの圏論的骨格
 
-**GSE Category ($\mathcal{G}$) の定義**：対象（Objects）をI-Node（主観主体）、射（Morphisms）を応答・影響・倫理的関係とする,。**関手（Functors）**としてRRA ($\mathcal{F}_{\mathrm{RRA}}$) とRBA ($\mathcal{F}_{\mathrm{RBA}}$) を定義し、状態更新の整合性（コミュテーション）を保障する,。**Endofunctor RCD ($\mathcal{R}$)** を定義し、任意の対象Iに対して複雑性計量 $C$ を増加させる変換を施す,。
+このセクションは、GSEが**特定の分野に限定されない普遍的な数学的構造**を持つことを証明するために、厳密な定義群（Definition, Theorem）を提示する。
 
-**RHS（責任地平設定）**を圏論上の**端対象（Terminal Object）$\mathbf{1}_{\mathcal{G}}$**に対応づけ、これは倫理的応答が不可能な終焉状態（Halt）を表すことを定義する,。**定理1**として、RCDの反復作用は有限な条件下でRHSへ収束する（Halt）ことを示し、GSEがこれを回避するために生成（増加）を要求する論理的構造を確立する。
+**6.4.1 GSE圏 $(\mathcal{G})$ の定義**
+
+GSEの理論的基盤を成す圏 $\mathcal{G}$ (GSE Category) を以下のように定義する。
+
+> \paragraph{定義 1 (GSE 圏).} 定める圏 $(\mathcal{G})$ は次のように与えられる。
+> \begin{itemize}
+> \item **対象 (Objects)**: $(\mathrm{Ob}(\mathcal{G}) = \{I_i\})$ — 各 $I_i$ は I-Node（主観主体）を表す。
+> \item **射 (Morphisms)**: 各射 $f: I_i \to I_j$ は、応答・影響・資源移動などの倫理的関係を表す。
+> \item **合成と恒等射**: 射の合成 $g \circ f$ は結合律を満たし、各対象 $I_i$ に対し恒等射 $\mathrm{id}_{I_i}$ を持つ。
+> \end{itemize}
+
+**6.4.2 RRA/RBAの関手化とRCD Endofunctor**
+
+GSEにおける倫理的動態、すなわち分析（RRA）と調整（RBA）のプロセス、およびRCDの責務は、圏上の**関手**としてモデル化される。
+
+> \paragraph{定義 2 (RRA/RBA を表す関手).} RRA（Resonance Response Analysis）および RBA（Responsible Behavioral Adjustment）は、圏 $(\mathcal{G})$ 上の関手 $\mathcal{F}_{\mathrm{RRA}}:\mathcal{G}\to\mathcal{G}$ と $\mathcal{F}_{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G}$ としてモデル化される。これらは対象を「更新された I-Node」へ、射を「修正された相互作用」へ写像する。関手は射の合成を保ち、状態更新の整合性（コミュテーション）を保障する。
+>
+> \paragraph{定義 3 (RCD としての Endofunctor).} RCD（Resonant Complexity Drive）は、$\mathcal{G}$ 上の **Endofunctor** $\mathcal{R}:\mathcal{G}\to\mathcal{G}$ として定義される。任意の対象 $I$ に対して、 $\mathcal{R}$ は複雑性計量 $C$ を増加させる変換を施し、次を満たす。
+>
+> $$C(\mathcal{R}(I)) > C(I) \tag{6.4.1}$$
+>
+> また $\mathcal{R}$ は射に対しても作用し、相互作用の構造を**不可逆的に変化させる**。
+
+**6.4.3 RHSの端対象化とRCDの終的性**
+
+RHS（責任地平設定）は、倫理的応答が不可能な終焉状態（Halt）を表す、圏の**端対象**として形式化される。
+
+> \paragraph{定義 4 (RHS としての端対象).} RHS（Responsibility Horizon Setting）は圏 $\mathcal{G}$ の**端対象（terminal object） $\mathbf{1}_{\mathcal{G}}$** に対応づけられる。RHS に到達するとは、対象がもはや有効な応答を行えない（Halt）状態に至ることを意味する。
+>
+> $$\forall I\in\mathrm{Ob}(\mathcal{G}),\quad !: I\to\mathbf{1}_{\mathcal{G}} \tag{6.4.2}$$
+>
+> \paragraph{定理 1 (RCD の終的性).} もし圏 $\mathcal{G}$ が有限個の対象から成り、かつ複雑性 $C(I)$ が単調増加かつ上界を持つと仮定すると、RCDの反復作用により系は RHS（端対象）へ収束する（Halt）。GSEの公理（Ax. Ex, Ax. UB）は、この収束を回避するために「**各更新で十分な生成（複雑性の増加）**」を要求する論理的構造を確立する。
 
 ### 6.5 哲学的意義と普遍性
+
 #### 6.5.1 従来の倫理学からの転換：善の必然性
 従来の倫理学が「善を定義し、それを達成する行為を探す」枠組みであったのに対し、GSEでは「**善は目的ではなく、構造に内在する必然的結果である**」と転換される。
 
 #### 6.5.2 圏論に基づく普遍性の確立：GSEカテゴリー倫理学
-GSEが、I-Nodeをオブジェクト、RRA/RBAを関手、RCDをEndofunctorの不変量、RHSを端点とするカテゴリー倫理学であると結論づける。倫理的生存は、端対象への収束を回避することと同等である。
+ 以上の定式化により、GSEは単なる規範哲学ではなく、**普遍的なカテゴリー倫理学**として確立される。
+
+ \text{GSEが、I-Nodeをオブジェクト、RRA/RBAを関手、RCDをEndofunctorの不変量、RHSを端点とするカテゴリー倫理学であると結論づける}。
+
+ Theorem RCDの存在論的帰結は、この数学的構造によって裏付けられる。
+
+ **倫理的生存（Ethical Viability）は、RCD Endofunctor $\mathcal{R}$ の反復作用による系が、端対象 $\mathbf{1}_{\mathcal{G}}$（Halt）へ収束することを回避することと同等である**。
+
+ 倫理的生成（RCD）は、有限な存在者が、不可避なコスト（Ax. UB）によって駆動される終焉（Halt）を、構造の生成力（複雑性の増大）によって継続的に回避し続けるための**論理的必然性**そのものを表す。
 ---
 　
 
