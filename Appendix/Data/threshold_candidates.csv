@@ -1,0 +1,5 @@
+param,threshold,index,score,n_points,median_metric_at_threshold
+UB,5.0,0,-0.08571428571428719,5,5.0
+Cth,0.9,5,49.99999999999996,11,5.0
+TL,13.0,2,0.04285714285714404,7,5.0
+Rcoeff,0.1,0,-1.7142857142857442,5,5.0
