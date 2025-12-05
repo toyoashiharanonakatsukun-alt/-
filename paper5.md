@@ -1,4 +1,4 @@
-## 生成システム倫理学（Generative Systems Ethics: GSE）：
+# 生成システム倫理学（Generative Systems Ethics: GSE）：
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
