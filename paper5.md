@@ -2,6 +2,8 @@
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
+　
+
 ## 概要（Abstract）：倫理的特異点への飛躍
 
 本論文は、倫理学の課題設定を三段階のレベル（Lv.1: 従来の倫理学 → Lv.2: 統合倫理哲学 → Lv.3: 生成システム倫理学）で捉え直し、特にLv.2の成果と限界を超越する**生成システム倫理学**（GSE）の理論的概観を提示する。
