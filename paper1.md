@@ -6,6 +6,10 @@
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
+Date：11/2025
+
+　
+
 ### 概要（Abstract）
 
 本論文は、善悪両者を同時的かつ相補的な生成プロセスとして再統合する統合倫理哲学（Integrative Ethics Philosophy）の理論的基盤を提示する。
@@ -369,6 +373,7 @@ Alasdair MacIntyre, After Virtue, Univ. of Notre Dame Press, 1981.
 高橋和則「エドマンド・バークの政治思想」博士論文（中央大学）、 2017年3月。
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
 
 
 
