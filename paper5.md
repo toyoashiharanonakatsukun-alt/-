@@ -2,6 +2,8 @@
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
+Date：12/2025
+
 　
 
 ## 概要（Abstract）：倫理的特異点への飛躍
