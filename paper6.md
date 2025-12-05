@@ -1083,6 +1083,48 @@ GSEは、倫理的行為を「**リソース $R$ と複雑性 $C$ の動態を�
 
 GSEがもたらすのは、倫理が**構造に内在する必然的結果**であり、不完全な存在が**応答を継続する**という行為そのものが、論理的必然性によって**肯定される**という、**力強い存在論的祝福**なのである。
 
+　
+ご要望に基づき、以前作成した「補遺：生成システム倫理学（GSE）の技術的基盤目録」に、推奨されるGitHubリポジトリ構造に基づいた参照ファイルのリンクを組み込み、論文（Markdownファイル）にそのまま組み込める形式に再構成しました。
+
+この目録は、理論の再現性（Reproducibility）と運用の操作性（Operability）を担保するための、**すべての形式証明、コアプロトコル、検証データ**のインデックスとして機能します。
+
+### 補遺：生成システム倫理学（GSE）の技術的基盤目録
+
+本論文の論理的堅牢性および再現性（Reproducibility）を担保するため、Theorem RCDの形式証明、コアプロトコルの実装、および運用閾値の決定に用いられた技術的基盤の詳細をここに目録として記す。これらのファイルは、論文とは別に構成されたGitHubリポジトリの`/Appendix` ディレクトリ内に配置されることを前提とする。
+
+#### I. 圏論的・形式的構造（形式証明および定義）
+
+GSEの普遍性を証明し、Theorem RCDの論理的必然性を確立するための数学的構造と証明書群。
+
+| 項目 | 形式 | 役割と理論的根拠 | 参照ファイルパス（GitHub） |
+| :--- | :--- | :--- | :--- |
+| **GSEカテゴリー理論の定義** | LaTeX | GSE圏 $\mathcal{G}$、RRA/RBA関手 $\mathcal{F}$、RCD Endofunctor $\mathcal{R}$、RHS端対象 $\mathbf{1}_{\mathcal{G}}$ の厳密な定義と、状態更新の整合性（コミュテーション）を確立する。 | [`Appendix/Proofs/GSE_Category_Definition.tex`](Appendix/Proofs/GSE_Category_Definition.tex) |
+| **Theorem RCDの形式証明** | LaTeX/背理法 | 非RCD行為（REDUCTION/MAINTENANCE）がAx. SIまたはAx. Exに違反し、最終的にHaltに至る論理的必然性を、背理法により証明する。 | [`Appendix/Proofs/Theorem_RCD_Proof.tex`](Appendix/Proofs/Theorem_RCD_Proof.tex) |
+| **W-Gradient公理系と $d_S$** | 形式的公理/数式 | Principle W1〜W5をSeverance Distance $d_S \in \{0, 1, 2, 3, 4\}$ に対応させ、倫理的勾配を定量化しRBAの $\Delta C$ 決定の論理的基盤とする。 | [`Appendix/Proofs/W_Gradient_Axioms.tex`](Appendix/Proofs/W_Gradient_Axioms.tex) |
+| **構造的複雑性 $C$ の厳密定義** | LaTeX/数式 | RCDの責務として不可逆的に増大させるべき指標 $C$ を、情報複雑度 $H(X)$、冗長性 $R(X)$、階層深度 $D(X)$ の統合値として定義する。 | [`Appendix/Protocols/C_Complexity_Definition.tex`](Appendix/Protocols/C_Complexity_Definition.tex) |
+
+#### II. 運用プロトコルとコアアルゴリズム（Pythonスクリプト）
+
+Theorem RCDの論理を実務的に実行し、倫理的危機を検知・回避するための操作的手順（GSEプロトコル）の具体的な実装。
+
+| 項目 | 形式 | 役割と理論的根拠 | 参照ファイルパス（GitHub） |
+| :--- | :--- | :--- | :--- |
+| **GSE公理クラス実装** | Python | Ax. Ex, Ax. SI ($C_{\mathrm{th}}$)、Ax. UB, Ax. GI, P. RCSの論理的真偽判定およびコスト計算（$\kappa(t)$ 含む）を行う基礎クラス。 | [`Appendix/Protocols/gse_axioms.py`](Appendix/Protocols/gse_axioms.py) |
+| **RRA/RBA統合コア実装** | Python | Severance Risk発生時にW-weighted Gradient（$d_S$ 依存）を適用し、構造破壊とRCD強制フェーズ（不可逆性の担保）を実行する中核関数。 | [`Appendix/Protocols/gse_rba_core.py`](Appendix/Protocols/gse_rba_core.py) |
+| **複雑性 $C$ 計測アルゴリズム** | Python | I-Nodeネットワークに基づき、シャノンエントロピー、冗長性、階層深度を計算し、総合複雑性 $C_{\text{norm}}$ を定量的に算出する実装。 | [`Appendix/Protocols/c_measurement.py`](Appendix/Protocols/c_measurement.py) |
+
+#### III. 検証データと図表（シミュレーション結果）
+
+GSE公理体系の運用閾値の堅牢性、および臨界点の論理的必然性を示すための定量データおよび可視化結果。
+
+| 項目 | 形式 | 役割と理論的根拠 | 参照ファイルパス（GitHub） |
+| :--- | :--- | :--- | :--- |
+| **$C_{\mathrm{th}}$ 臨界点検出グラフ** | PNG画像 | $C_{\mathrm{th}} = \mathbf{0.90}$ を境にSeverance Rateが $0$ から $1$ に不連続に上昇する強い閾値効果を示し、Ax. SIの運用警戒ラインを確定させる。 | [`Images/Cth_sensitivity.png`](Images/Cth_sensitivity.png) |
+| **$C_{\mathrm{th}} \times \theta_L$ 相互作用解析表** | CSVデータ | 均質化閾値と低複雑性ショック係数 ($\theta_L$) の二次元グリッドサーチ結果。臨界点が $\theta_L$ の変動に対して極めて高い堅牢性を持つことを証明。 | [`Appendix/Data/Cth_TL_Interaction_Data.csv`](Appendix/Data/Cth_TL_Interaction_Data.csv) |
+| **ネットワーク複雑性計測結果** | CSVデータ | Lattice構造などが高い $C_{\text{norm}}$ を持つことを示す検証結果。RBAの目標 $C$ が実務的に計測可能であることを示す。 | [`Appendix/Data/C_Topology_Validation.csv`](Appendix/Data/C_Topology_Validation.csv) |
+
+　
+
 参考文献：Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
 
 　
