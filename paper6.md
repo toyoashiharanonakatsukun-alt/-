@@ -1083,6 +1083,8 @@ GSEは、倫理的行為を「**リソース $R$ と複雑性 $C$ の動態を�
 
 GSEがもたらすのは、倫理が**構造に内在する必然的結果**であり、不完全な存在が**応答を継続する**という行為そのものが、論理的必然性によって**肯定される**という、**力強い存在論的祝福**なのである。
 
+参考文献：Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+
 　
 
 © 2025 Nakatsu Mitsuhiro. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)
