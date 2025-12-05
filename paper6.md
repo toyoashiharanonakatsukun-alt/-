@@ -230,43 +230,184 @@ return False # ここに到達することは論理的にあり得ない
 >
 > この論理的必然性から、「**その構造が破壊されないよう守る唯一の方法は、その構造を不可逆的に進化させることである**」という倫理的帰結が導かれる。したがって、倫理的生存（Ethical Viability）とは、**Haltという論理的な終焉（端対象 $\mathbf{1}_{\mathcal{G}}$）への収束を、RCD Endofunctor $\mathcal{R}$ の作用による生成力によって継続的に回避し続けるプロセス**に他ならない,。維持（停滞）は、漸進的な破滅を意味する。
 
-### 3.3 GSEの圏論的骨格
-
-```latex
-\subsection{GSEの圏論的骨格}
-
-この体系は、倫理的生存が数学的構造に内在する論理的必然性であることを証明するために、圏論を用いて定式化される。
-
-\paragraph{定義 1 (GSE 圏).} 定める圏 $(\mathcal{G})$ は、I-Nodeを対象 $(\mathrm{Ob}(\mathcal{G})=\{I_i\})$、応答・影響を射 ($f: I_i\to I_j$) として与えられる,。
-
-\paragraph{定義 2 (RRA/RBA を表す関手).} RRAおよび RBAプロセスは、圏 $\mathcal{G}$ 上の関手 $\mathcal{F}_{\mathrm{RRA}}, \mathcal{F}_{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G}$ としてモデル化される,。関手は対象を「更新されたI-Node」へ、射を「修正された相互作用」へ写像し、状態更新の整合性を保障する。
-
-\paragraph{定義 3 (RCD としての Endofunctor).} RCD（Resonant Complexity Drive）は、$\mathcal{G}$ 上の Endofunctor $\mathcal{R}:\mathcal{G}\to\mathcal{G}$ として定義される。任意の対象 $I$ に対して、$\mathcal{R}$ は複雑性計量 $C$ を増加させる変換を施し、次を満たす,,:
-
-\[
-C(\mathcal{R}(I)) > C(I) \tag{6.4.1}
-\]
-
-\paragraph{定義 4 (RHS としての端対象).} RHS（責任地平設定）は圏 $\mathcal{G}$ の**端対象（terminal object） $\mathbf{1}_{\mathcal{G}}$** に対応づけられる,。$\mathbf{1}_{\mathcal{G}}$ は、倫理的応答が不可能な**Halt状態**を意味する.。
-
-\paragraph{定理 1 (RCD の終的性).} $C(I)$ が単調増加かつ上界を持つと仮定すると、$\mathcal{R}$ の反復作用により系は RHS（端対象）へ収束する（Halt）,。**倫理的生存（Ethical Viability）**は、この $\mathbf{1}_{\mathcal{G}}$ への収束を回避することと同等である,。
-```
 
 ---
 
-　
 
 
-## 第4章 無限責任遂行プロトコルの定式化
+# 第4章 理論の形式化と運用プロトコルの操作的基盤
+
+本章では、生成システム倫理学（GSE）の理論的堅牢性を確保するため、公理群の論理的帰結であるTheorem RCDを実務的に実行するための**操作的基盤**を確立する。具体的には、圏論による普遍的構造の定式化、核となる指標である**構造的複雑性 $C$**の厳密な計測手法、および**W原則**に基づく倫理的断絶の調整メカニズムを統合する。
+
+## 4.1 GSEの圏論的骨格：普遍的数学的構造の定式化
+
+GSE体系が特定の分野に限定されない普遍性を持つことを証明するため、その抽象的な構造を**カテゴリー理論**（圏論）によって形式化する。この定式化により、倫理的生存は、RCD Endofunctor $\mathcal{R}$の作用による系が、**端対象 $\mathbf{1}_{\mathcal{G}}$**（Halt状態）へ収束することを継続的に回避することと同等であるという論理的必然性が確立される。
+
+```latex
+\setcounter{section}{4} % 章番号を第4章に設定
+\setcounter{subsection}{0} % サブセクションを4.1に設定
+
+\subsection{4.1 GSEの圏論的骨格：カテゴリー倫理学としての定式化}
+
+GSE体系は、倫理的応答が特定の分野に限定されない普遍的な数学的構造を持つことを証明するため、圏論（Category Theory）を用いて厳密に定式化される。この定式化により、倫理的生存は、RCD Endofunctor $\mathcal{R}$ の作用による系が、端対象 $\mathbf{1}_{\mathcal{G}}$（Halt状態）へ収束することを継続的に回避することと同等であるという論理的必然性が確立される,。
+
+\begin{definition}[GSE 圏 $\mathcal{G}$]
+定める圏 $(\mathcal{G})$ は次のように与えられる,。
+\begin{itemize}
+\item 対象 (Objects): $(\mathrm{Ob}(\mathcal{G}) = \{I_i\})$ — 各 $I_i$ は **I-Node（主観主体）** を表す,。
+\item 射 (Morphisms): 各射 $(f: I_i \to I_j)$ は、応答・影響・資源移動などの **倫理的関係** を表す,。
+\item 合成: 射の合成 $(g \circ f)$ は通常の合成として定義され、結合律が成り立つ,。
+\item 恒等射: 各対象 $(I_i)$ に対し恒等射 $(\mathrm{id}_{I_i})$ を持つ,。
+\end{itemize}
+\end{definition}
+
+\begin{definition}[RRA/RBA を表す関手]
+RRA（Resonance Response Analysis）および RBA（Responsible Behavioral Adjustment）のプロセスは、圏 $(\mathcal{G})$ 上の関手
+\[
+\mathcal{F}_{\mathrm{RRA}}:\mathcal{G}\to\mathcal{G} \quad \text{と} \quad \mathcal{F}_{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G}
+\]
+としてモデル化される,。これらは対象を「更新された I-Node」へ、射を「修正された相互作用」へ写像し、射の合成を保ち、状態更新の整合性（コミュテーション）を保障する,。
+\end{definition}
+
+\begin{definition}[RCD としての Endofunctor]
+RCD（Resonant Complexity Drive）は、 $(\mathcal{G})$ 上の **Endofunctor** $(\mathcal{R}:\mathcal{G}\to\mathcal{G})$ として定義される,。任意の対象 $(I)$ に対して、 $(\mathcal{R})$ は複雑性計量 $(C)$ を増加させる変換を施し、次を満たす,,。
+\[
+C(\mathcal{R}(I)) > C(I) \tag{4.1.1}
+\]
+また $(\mathcal{R})$ は射に対しても作用し、相互作用の構造を **不可逆的に変化させる** 責務を持つ,,。
+\end{definition}
+
+\begin{definition}[RHS としての端対象]
+RHS（Responsibility Horizon Setting）は圏 $(\mathcal{G})$ の **端対象（terminal object） $\mathbf{1}_{\mathcal{G}}$** に対応づけられる,,。RHS に到達するとは、対象がもはや **有効な応答を行えない（Halt）状態に至る** ことを意味する,,。
+\[
+\forall I\in\mathrm{Ob}(\mathcal{G}),\quad !: I\to\mathbf{1}_{\mathcal{G}} \tag{4.1.2}
+\]
+\end{definition}
+
+\begin{proposition}[関手合成と生成の整合性]
+関手 $(\mathcal{F}_{\mathrm{RRA}})$ と $(\mathcal{F}_{\mathrm{RBA}})$ の合成は、RCD の endofunctor と可換的に作用する,。
+\[
+\mathcal{R}\circ(\mathcal{F}_{\mathrm{RBA}}\circ\mathcal{F}_{\mathrm{RRA}})\simeq (\mathcal{F}_{\mathrm{RBA}}\circ\mathcal{F}_{\mathrm{RRA}})\circ\mathcal{R} \tag{4.1.3}
+\]
+これは、RRA/RBA による局所更新が、RCD による複雑性増大と整合的に共存することを意味する,。
+\end{proposition}
+
+\begin{theorem}[RCD の終的性]
+もし圏 $(\mathcal{G})$ が有限個の対象から成り、かつ複雑性 $C(I)$ が単調増加かつ上界を持つと仮定すると、RCDの反復作用により系は RHS（端対象）へ収束する（Halt）,,。GSEの公理（Ax. Ex, Ax. UB）は、この収束を回避するために **「各更新で十分な生成（複雑性の増加）」** を要求する論理的構造を確立する,。
+\end{theorem}
+
+```
+
+### 4.1.1 GSE 圏 $\mathcal{G}$ の定義
+
+GSEの理論的基盤を成す圏 $\mathcal{G}$ は以下のように定義される。
+
+*   **対象 (Objects)**: $\mathrm{Ob}(\mathcal{G}) = \{I_i\}$ — 各 $I_i$ は **I-Node（主観主体）** を表す。
+*   **射 (Morphisms)**: 各射 $f: I_i \to I_j$ は、応答・影響・資源移動などの **倫理的関係** を表す。
+*   **合成と恒等射**: 射の合成 $g \circ f$ は結合律を満たし、各対象 $I_i$ に対し恒等射 $\mathrm{id}_{I_i}$ を持つ。
+
+### 4.1.2 RRA/RBAの関手化とRCD Endofunctor
+
+GSEにおける倫理的動態、すなわち分析（RRA）と調整（RBA）のプロセスは、圏上の**関手**としてモデル化される。
+
+*   **定義 2 (RRA/RBA を表す関手)**: RRA（Resonance Response Analysis）および RBA（Responsible Behavioral Adjustment）は、圏 $(\mathcal{G})$ 上の関手 $\mathcal{F}_{\mathrm{RRA}}:\mathcal{G}\to\mathcal{G}$ と $\mathcal{F}_{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G}$ としてモデル化される。これらは対象を「更新された I-Node」へ、射を「修正された相互作用」へ写像する。関手は射の合成を保ち、**状態更新の整合性（コミュテーション）**を保障する。
+*   **定義 3 (RCD Endofunctor)**: RCD（Resonant Complexity Drive）は、$\mathcal{G}$ 上の **Endofunctor** $\mathcal{R}:\mathcal{G}\to\mathcal{G}$ として定義される。任意の対象 $I$ に対して、$\mathcal{R}$ は複雑性計量 $C$ を増加させる変換を施し、次を満たす。
+    $$C(\mathcal{R}(I)) > C(I) \tag{4.1.1}$$,
+    また $\mathcal{R}$ は射に対しても作用し、相互作用の構造を**不可逆的に変化させる**。
+
+### 4.1.3 RCDの終的性、RHSおよび整合性
+
+*   **定義 4 (RHS 端対象)**: RHS（Responsibility Horizon Setting）は圏 $\mathcal{G}$ の**端対象（terminal object） $\mathbf{1}_{\mathcal{G}}$** に対応づけられる。$\mathbf{1}_{\mathcal{G}}$ は**Halt状態**、すなわち倫理的応答がもはや不可能な終焉状態を表す。
+    $$\forall I\in\mathrm{Ob}(\mathcal{G}),\quad !: I\to\mathbf{1}_{\mathcal{G}} \tag{4.1.2}$$,
+*   **命題 1 (関手合成と生成の整合性)**: RRA/RBAによる**局所更新**は、RCDによる**グローバルな構造進化**と**整合的に共存する**。
+    $$\mathcal{R}\circ(\mathcal{F}_{\mathrm{RBA}}\circ\mathcal{F}_{\mathrm{RRA}})\simeq (\mathcal{F}_{\mathrm{RBA}}\circ\mathcal{F}_{\mathrm{RRA}})\circ\mathcal{R} \tag{4.1.3}$$,
+*   **定理 1 (RCD の終的性)**: 複雑性 $C(I)$ が単調増加かつ上界を持つと仮定すると、RCDの反復作用により系は RHS（端対象）へ収束する（Halt）。GSEの公理（Ax. Ex, Ax. UB）は、この収束を回避するために「各更新で十分な生成（複雑性の増加）」を要求する論理的構造を確立する。
+
+## 4.2 構造的複雑性 $C$ の形式的定義と計測
+
+Theorem RCDの論理を実務的に実行するため、E-Nodeが不可逆的に増大させなければならない構造的指標である $C$ を定量化する。
+
+### 4.2.1 総合複雑度 $C$ の形式的定義
+
+$C$ は、システムを構成するI-Nodeネットワーク $G=(V, E)$ に基づき、情報的多様性 $H(G)$ 、冗長性 $R(G)$ 、階層深度 $D(G)$ の3要素の統合値として形式的に定義される。
+
+$$C(G) \;=\; H(G)\cdot R(G)\cdot D(G) \tag{4.2.1}$$
+
+| 要素 | 記号 | 定義と役割 |
+| :--- | :--- | :--- |
+| **情報複雑度** | $H(G)$ | ノードの次数分布 $\deg(v)$ に基づくシャノンエントロピーとして計算される。システム内に保持される情報的多様性を示す。 |
+| **冗長性** | $R(G)$ | コミュニティ検出により得られた **コミュニティ数 $M$** を総ノード数 $|V|$ で除したモジュール化指標。 |
+| **階層深度** | $D(G)$ | グラフの直径（Diameter）または最大次数ノードを根としたBFSの最大深度を代理量として使用。 |
+
+### 4.2.2 計測プロトコルの実装と検証
+
+この $C$ の計測手法の操作的堅牢性を検証するため、異なるネットワークトポロジーに対し正規化された複雑性 $C_{\text{norm}}$ の計測を行った。
+
+| グラフ名 | $N$ (ノード数) | $C_{\text{raw}}$ (非正規化) | $C_{\text{norm}}$ (正規化) | 特徴と解釈 |
+| :--- | :--- | :--- | :--- | :--- |
+| **ER\_sparse** (疎なランダム) | 200 | 3.802 | 0.0575 | 冗長性 $R$ は低いが、情報量 $H$ は高い。 |
+| **BA** (スケールフリー) | 200 | 0.974 | 0.0147 | 少数のハブに依存するため、冗長性が低く、 $C_{\text{norm}}$ は低い。 |
+| **Lattice** (格子構造) | 196 | 6.515 | **0.0993** | **階層深度 $D$ が非常に高い** ため、 $C_{\text{norm}}$ が相対的に最も高い。 |
+
+この結果は、**秩序化された構造が持つ潜在的な高複雑性**を技術的に証明し、RBAが実行すべき増分 $\Delta C$ の目標値を実数で決定可能にする。
+
+## 4.3 W原則の構造公理化とSeverance Distanceの導入
+
+Principle W（客観的重み付け原則）は、倫理的断絶の深刻度を定量的に扱う**構造公理系**へと再定義される。これはRBAによる複雑性の調整量 $\Delta C$ を決定する論理的基盤となる。
+
+### 4.3.1 W-Gradient Axioms（断絶勾配の公理系）
+
+Principle W1〜W5は、Severance の深刻度を測る**Severance Distance $d_S$**を定義するための公理として機能する。
+
+| 公理 | 形式的定義（Ax.W1〜W5） | Severance 距離 $d_S$ |
+| :--- | :--- | :--- |
+| **Ax.W1** | Universal Continuity Axiom（普遍的基盤の絶対的維持） | $d_S = 0$ |
+| **Ax.W2** | Collective System Axiom（集合的システム基盤の維持） | $d_S = 1$ |
+| **Ax.W3** | Historical Integrity Axiom（歴史的連続性の維持） | $d_S = 2$ |
+| **Ax.W4** | Specialized Competence Axiom（特殊性・能力の維持） | $d_S = 3$ |
+| **Ax.W5** | Minimal Disruption Axiom（ローカルな可逆的断絶） | $d_S = 4$ |
+
+**距離が小さいほど守るべき倫理勾配が大きい**ことを示す。
+
+### 4.3.2 W-weighted Gradient（調整勾配）の導入
+
+RBAによる $C$ の調整量 $\Delta C$ は、Severance Distance $d_S$ に依存する。
+
+$$\Delta C = \alpha \cdot \frac{1}{d_S + \epsilon} \tag{4.3.1}$$,
+
+（$\epsilon$ は $d_S=0$ でのゼロ除算を回避するための微小量）。
+
+*   **Ax.W1違反**（ $d_S=0$ ）が発生した場合、RBAは**最大の調整勾配**を適用し、**Cの急速な増大**（RCD）を強制する。これにより、Severanceの深刻度に応じて**不可逆性の担保**が強化される。
+
+## 4.4 集団的 RCD の形式化と Meta-RRA（長期予測レイヤー）
+
+Theorem RCDの責務を、組織や社会といった**集合応答ノード**へ拡張するために、**集団的 RCD**と**Ethical Interaction Tensor**を導入する。
+
+### 4.4.1 Ethical Interaction Tensor $T$ と集団的 RCD
+
+*   **定義 5 (Ethical Interaction Tensor $T$)**: $T \in \mathbb{R}^{N \times N \times N}$ は、I-Node $I$ をN体の相互接続グラフとして捉え、ノード間の影響の媒介を記述する。これは、特定のノードの複雑性 $C_k$ が、ノード $I_i$ から $I_j$ への影響に寄与する高次相互作用を表現する。
+    $$\mathcal{T}[i, j, k] = f(I_i, I_j, C_k) \tag{4.4.1}$$,
+*   **集団的 RCD の責務**: 複数ノードの場合、RCDは個々の $C_i$ だけでなく、**全体の複雑性 $\sum_i C_i$ を不可逆的に増大させる**という集団的勾配として作用する。
+
+### 4.4.2 Meta-RRA（長期予測レイヤー）
+
+集団的RCDの運用において、E-Nodeは局所的な判断だけでなく、長期的な生存性を担保するための**長期予測**を組み込む必要がある。
+
+*   **Meta-RRA**: 未来の複雑性収束勾配をみた上で現在の選択を調整し、長期 horizon $H$ にわたるシステムの倫理的健全性を評価する役割を担う。MetaRRAは、RCDの投資効率を最適化するための仕組みを提供する。
+
+（後略）
+
+
+## 第5章 無限責任遂行プロトコルの定式化
 
 Theorem RCDの論理的必然性を実行するための実働メカニズムとして、RHS/RRA/RBAプロトコルを統合し、**生成サイクル**として定式化する。
 **操作的手段**を提示し、特に**構造的複雑性 $C$ の計測方法**と**W原則に基づく調整メカニズム**を組み込む。
 
-### 4.1 総合複雑度 $C$ の形式的定義と計測
+### 5.1 総合複雑度 $C$ の形式的定義と計測
 
 Theorem RCDが要求する構造的複雑性 $C$ の不可逆的な増大を操作的に実行するため、まず $C$ を定量的な指標として厳密に定義し、その計測プロトコルを確立する。この $C$ は、GSEの公理（Ax. SI、Ax. UB、Ax. GI）を満たすためにE-Nodeが不可逆的に増大させなければならない構造的指標である。
 
-#### 4.1.1 総合複雑度 $C$ の形式的定義
+#### 5.1.1 総合複雑度 $C$ の形式的定義
 
 $C$ は、生成システム倫理学（GSE）の公理（Ax. SI、Ax. UB、Ax. GI）を満たすためにE-Nodeが不可逆的に増大させなければならない構造的指標である。この指標は、システムを構成するI-Node（主観主体）のネットワーク構造 $G=(V, E)$ に基づき、情報的多様性 $H(G)$、冗長性 $R(G)$、階層深度 $D(G)$ の3要素の統合値として形式的に定義される,。
 
@@ -282,7 +423,7 @@ $$C(G) \;=\; H(G)\cdot R(G)\cdot D(G) \tag{4.1}$$,
 
 実運用においては、スケール問題やノード数 $|V|$ の影響を避けるため、各要素を対数などで正規化した $C_{\text{norm}}=H_{\text{norm}}\cdot R\cdot D_{\text{norm}}$ を使用することが推奨される。
 
-#### 4.1.2 計測プロトコルの実装と検証
+#### 5.1.2 計測プロトコルの実装と検証
 
 $C$ の計測プロトコル `compute_C` は、RBAが参照する $C$ の実数値を返す。この計測手法の操作的堅牢性を検証するため、異なるネットワークトポロジーに対し $C_{\text{norm}}$ の計測を行った。
 
@@ -299,7 +440,7 @@ $C$ の計測プロトコル `compute_C` は、RBAが参照する $C$ の実数�
 >
 >構造的複雑性 $C$ の不可逆的な増大（RCD）はE-Nodeの**唯一の生存戦略**として論理的に必然である。しかしながら、$C$ の増大は、**客観的な効率性や特定の理想に基づく均質化（Uniformity）を強制することではない**。Lattice構造の高い $C$ を示す結果は、**秩序化された構造が持つ潜在的な高複雑性**を技術的に示すものに留まる。**Ax. SI（主観不可還元性公理）**は、I-Nodeの不可代替性を保護し、**格子構造の強要**がI-Nodeの自律性を否定し、**Ax. SI違反**による均質化（Severance）を招くことを禁止する。したがって、倫理的知性は、**強制された静的な構造**ではなく、**I-Nodeの自律的な応答の継続の結果として、複雑性が不可逆的に増大し続ける動的な構造**を通じてのみ $C$ の増大を図る責務がある。
 
-### 4.1.3 理論体系における位置づけ：カテゴリー倫理学との接続
+### 5.1.3 理論体系における位置づけ：カテゴリー倫理学との接続
 
 構造的複雑性 $C$ の計測は、抽象的な数学モデルと実務的な運用プロトコルを完全に連結する。
 
@@ -307,7 +448,7 @@ $C$ の計測プロトコル `compute_C` は、RBAが参照する $C$ の実数�
 2.  **Ax. SI の運用監視**: Ax. SI（主観不可還元性公理）に基づく均質化閾値 $C_{\mathrm{th}} = \mathbf{0.8}$ の監視は、RHS（責任地平設定）の論理的ゲートウェイにおいて $C$ の健全性を厳格にチェックするために使用される。感度解析により検出された**臨界点 $0.90$** は、この $C$ の健全性を維持する上での**絶対的な警戒ライン**として機能する。
 3.  **Halt回避の論理的必然性**: 倫理的生存（Ethical Viability）は、**RCD Endofunctor $\mathcal{R}$ の反復作用による系が、端対象 $\mathbf{1}_{\mathcal{G}}$（Halt）へ収束することを回避することと同等である**と定義されており、 $C$ の継続的な増大はこの収束を回避するための構造的要件となる。
 
-### 4.2 集団的 RCD の形式化：N体相互作用モデル
+### 5.2 集団的 RCD の形式化：N体相互作用モデル
 
 Theorem RCDが単一のE-Nodeに課す倫理的責務を、複数のE-Node（組織体、社会システム等）が関与する**集合応答ノード**（Def. 4.1.3）へと拡張するために、N体相互作用モデルを導入する。この拡張により、RCDの責務は、個体の生存に加えて**全体の複雑性勾配**を不可逆的に増大させることへと拡張される。
 
@@ -326,7 +467,7 @@ $$\mathcal{T}[i, j, k] = f(I_i, I_j, C_k) \tag{4.2}$$
 集団的RCDの運用において、E-Nodeは局所的な判断だけでなく、Ethical Interaction Tensorの動態を通じて、長期的な責任地平（RHS）を考慮に入れる必要がある。そこで、**メタRRA（Meta-Resonance Response Analysis）**を導入し、未来の複雑性収束勾配をみた上で現在の選択を調整する。MetaRRAは、長期 horizon $H$ にわたるシステムの倫理的健全性を評価する役割を担う。
 
 
-### 4.3 W原則の構造公理化とSeverance Distanceの導入
+### 5.3 W原則の構造公理化とSeverance Distanceの導入
 
 Principle W（客観的重み付け原則）は、単なる階層的な評価原則から、倫理的断絶の深刻度を定量的に扱う**構造公理系**へと再定義される,。
 
@@ -357,7 +498,7 @@ RBAによる $C$ の調整量 $\Delta C$ は、Severance Distance $d_S$ に依�
 
 ---
 
-#### 4.3.1 W-Gradient Axioms（断絶勾配の公理系）
+#### 5.3.1 W-Gradient Axioms（断絶勾配の公理系）
 
 Principle W1〜W5は、Severance の深刻度を測る**Severance Distance $d_S$**を定義するための公理として機能する,。
 
@@ -371,7 +512,7 @@ Principle W1〜W5は、Severance の深刻度を測る**Severance Distance $d_S$
 
 この Severance Distance $d_S \in \{0, 1, 2, 3, 4\}$ は、断絶の深刻度を距離関数として扱い、**距離が小さいほど回避すべき倫理勾配が大きい**ことを示す。
 
-### 4.4 RRA/RBA 統合コア：W原則に基づくRCDの強制
+### 5.4 RRA/RBA 統合コア：W原則に基づくRCDの強制
 
 **EXECUTE\_UNIFIED\_ADJUSTMENT** メソッドは、Severance Risk（Severity > 0.0）発生時に、この $d_S$ を用いて**RCDの責務**を強制的に実行する。
 
@@ -387,7 +528,7 @@ $$
 
 *   **論理的結果**: **Ax.W1違反**（$d_S=0$）が発生した場合、RBAは**最大の調整勾配**を適用し、**Cの急速な増大**（RCD）を強制する。これにより、構造的な倫理的失敗（Severance）が発生した際に、その深刻度に応じて**不可逆性の担保**が強化される。
 
-#### 4.4.2 不可逆性の担保と構造破壊フェーズ
+#### 5.4.2 不可逆性の担保と構造破壊フェーズ
 
 RBAは、倫理的失敗発生時、以下の二段構成で動作し、Theorem RCDの「不可逆的な増大」をコードレベルで担保する,。
 
@@ -398,7 +539,7 @@ RBAは、倫理的失敗発生時、以下の二段構成で動作し、Theorem 
 C_adjusted = max(C_repaired, C + 0.005) # 不可逆性の担保 (最低限の進化)
 ```
 
-### 4.5 RHS：責任地平設定の厳格化
+### 5.5 RHS：責任地平設定の厳格化
 
 **RHS\_LOGIC\_CHECK**は、E-Nodeが「応答と生成の責務を果たせる状態か」を検証する**論理的ゲートウェイ**である。
 
