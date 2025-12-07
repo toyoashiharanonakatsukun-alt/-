@@ -1,0 +1,38 @@
+```latex
+\subsection{複雑性計量 \(C\) の厳密定義}
+我々は系の局所的/全体的複雑性を、情報的多様性・冗長性（モジュール性）・階層深度の積として定義する。
+\paragraph{定義.} 与えられたグラフ \(G=(V,E)\) に対して、複雑性 \(C(G)\) を
+\[
+C(G) \;=\; H(G)\cdot R(G)\cdot D(G)
+\]
+で定める。ただし各項は以下で定義される。
+\begin{enumerate}
+\item \(H(G)\) — \textbf{情報複雑度 (Shannon entropy)}
+ノードの次数分布 \( \deg(v) \) を用いて確率質量関数
+\[
+p_v = \frac{\deg(v)}{\sum_{u\in V}\deg(u)} \quad (\deg(v)>0)
+\]
+を定め、エントロピーを計算する：
+\[
+H(G) = -\sum_{v:\deg(v)>0} p_v \log_2 p_v.
+\]
+\item \(R(G)\) — \textbf{冗長性（モジュール化指標）}
+コミュニティ検出により得たコミュニティ数 \(M\) を用い、
+\[
+R(G)=\frac{M}{|V|}.
+\]
+必要に応じてモジュラリティ \(Q\) を併用し品質を確認する。
+\item \(D(G)\) — \textbf{階層深度（BFS-tree 深度代理）}
+根ノードを最大次数ノードとして BFS を行い、その最大深度を \(D\) とする。非連結グラフでは成分ごとの深度のサイズ重み付き平均を採る。
+\end{enumerate}
+\paragraph{正規化.} 実運用ではスケール問題を避けるため次を使う：
+\[
+H_{\text{norm}} = \frac{H}{\log_2(\max(2,|V|))},\qquad
+D_{\text{norm}} = \frac{D}{1+\log_2(\max(2,|V|))}.
+\]
+正規化された複雑性は
+\[
+C_{\text{norm}} = H_{\text{norm}}\cdot R \cdot D_{\text{norm}}
+\]
+となる。これにより \(C_{\text{norm}}\in[0,\text{some small}]\) で比較可能になる。
+```
