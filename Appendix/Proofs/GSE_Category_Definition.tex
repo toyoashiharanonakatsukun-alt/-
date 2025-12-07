@@ -1,0 +1,31 @@
+# 圏論的定式化（論文用フォーマル記法）
+[
+\textbf{Category-theoretic formalization of GSE}
+]
+\paragraph{定義 1 (GSE 圏).} 定める圏 (\mathcal{G}) は次のように与えられる。
+\begin{itemize}
+\item 対象 (Objects): (\mathrm{Ob}(\mathcal{G})={I_i}) — 各 (I_i) は I-Node（主観主体）を表す。
+\item 射 (Morphisms): 各射 (f: I_i\to I_j) は、応答・影響・資源移動などの関係を表す。
+\item 合成: 射の合成は通常の合成 (g\circ f) として定義され、結合律が成り立つ。
+\item 恒等射: 各対象 (I_i) に対し恒等射 (\mathrm{id}_{I_i}) を持つ。
+\end{itemize}
+\paragraph{定義 2 (RRA/RBA を表す関手).} RRA（Resonance Response Analysis）および RBA（Responsible Behavioral Adjustment）は、圏 (\mathcal{G}) 上の関手
+(\mathcal{F}*{\mathrm{RRA}}:\mathcal{G}\to\mathcal{G}) と (\mathcal{F}*{\mathrm{RBA}}:\mathcal{G}\to\mathcal{G})
+としてモデル化される。これらは対象を「更新された I-Node」へ、射を「修正された相互作用」へ写像する。
+[
+\mathcal{F}*{\mathrm{RRA}}(I_i)=I_i',\qquad \mathcal{F}*{\mathrm{RRA}}(f)=f'
+]
+関手は射の合成を保ち、状態更新の整合性（コミュテーション）を保障する。
+\paragraph{定義 3 (RCD としての Endofunctor).} RCD（Resonant Complexity Drive）は、(\mathcal{G}) 上の endofunctor (\mathcal{R}:\mathcal{G}\to\mathcal{G}) として定義される。任意の対象 (I) に対して、(\mathcal{R}) は複雑性計量 (C) を増加させる変換を施し、次を満たす:
+[
+C(\mathcal{R}(I));>;C(I).
+]
+また (\mathcal{R}) は射に対しても作用し、相互作用の構造を不可逆的に変化させる。
+\paragraph{定義 4 (RHS としての端対象).} RHS（Responsibility Horizon Setting）は圏 (\mathcal{G}) の端対象（terminal object）(\mathbf{1}*{\mathcal{G}}) に対応づけられる。RHS に到達するとは、対象がもはや有効な応答を行えない（Halt）状態に至ることを意味する:
+[
+\forall I\in\mathrm{Ob}(\mathcal{G}),\quad !: I\to\mathbf{1}*{\mathcal{G}}.
+]
+\paragraph{命題 1 (関手合成と生成の整合性).} 関手 (\mathcal{F}*{\mathrm{RRA}}) と (\mathcal{F}*{\mathrm{RBA}}) の合成は、RCD の endofunctor と可換的に作用する:
+[
+\mathcal{R}\circ(\mathcal{F}*{\mathrm{RBA}}\circ\mathcal{F}*{\mathrm{RRA}})\simeq (\mathcal{F}*{\mathrm{RBA}}\circ\mathcal{F}*{\mathrm{RRA}})\circ\mathcal{R},
+]
