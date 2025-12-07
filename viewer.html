@@ -3,6 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Markdown Viewer</title>
+  <style>
+/* 枠線を表示させるためのCSSを追加しますわ */
+#content table {
+  border-collapse: collapse; /* セルの境界線を重ねて一つの線にします */
+  width: 100%; /* 表の幅を親要素に合わせます */
+  margin: 1em 0; /* 上下に少し余白をとります */
+}
+#content th, #content td {
+  border: 1px solid #ccc; /* 1ピクセルの灰色の実線で枠線を指定します */
+  padding: 8px; /* セル内の文字と枠線の間に余白を作ります */
+  text-align: left; /* 文字を左寄せにします */
+}
+#content th {
+  background-color: #f2f2f2; /* 見出し行に薄い背景色をつけます */
+}
+</style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
