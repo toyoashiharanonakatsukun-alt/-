@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+
+% Theorem environments
+\newtheorem{axiom}{Axiom}
+\newtheorem{definition}{Definition}
+
+% Category symbols (for consistency, although not strictly needed here)
+\newcommand{\catG}{\mathscr{G}}
+
+\begin{document}
+
+\title{W-Gradient Axioms and Severance Distance\\
+\small Formal Definition of Ethical Discontinuity Hierarchy in GSE}
+\author{GSE Formal Foundation}
+\date{}
+\maketitle
+
+\section*{1. 序論：断絶勾配の公理化}
+
+本セクションでは、Principle W（客観的重み付け原則）を、倫理的断絶の深刻度を測る構造公理系として再定義する [2], [3]。これにより、RBA（責任的行為調整）プロトコルは、断絶の深刻度に応じた構造的複雑性 \(C\) の調整量 \(\Delta C\) を決定する論理的基盤を得る [4], [5]。
+
+\section*{2. W-Gradient Axioms (Ax.W1 - Ax.W5)}
+
+Principle W1からW5は、Severance の深刻度を測るSeverance Distance \(d_S\) を定義するための公理として機能する [3]。
+
+\begin{axiom}[Ax.W1: Universal Continuity Axiom]
+あらゆる I-Node に共通する普遍的基盤（生命、生態系の存続など）への断絶は、常に絶対的に回避されなければならない [6], [1]。
+\end{axiom}
+
+\begin{axiom}[Ax.W2: Collective System Axiom]
+共同体・集合的システム（国家、広範な経済基盤など）の維持に関わる構造的連関は、Ax.W1に次いで高い保護度を有する [6], [7]。
+\end{axiom}
+
+\begin{axiom}[Ax.W3: Historical Integrity Axiom]
+長期間培われ最適化された継時的波長（歴史的連続性、積層構造）を担う I-Node の固有性は、恣意的な破却により不可逆断絶となる [6], [7]。
+\end{axiom}
+
+\begin{axiom}[Ax.W4: Specialized Competence Axiom]
+代替不可能な個人の特殊性・能力、または集団の根源的波長（固有性）の喪失は、I-Node の局所的崩壊を引き起こす断絶となる [6], [7]。
+\end{axiom}
+
+\begin{axiom}[Ax.W5: Minimal Disruption Axiom]
+断絶が限定的であり、かつ回復が比較的容易なローカルな可逆的パタンの破壊は、最も浅い階層に属する [6], [7]。
+\end{axiom}
+
+\section*{3. Severance Distance と RCD 調整勾配}
+
+\subsection{定義 (Severance Distance $d_S$)}
+倫理的断絶の深刻度 $d_S$ は、Ax.W1からAx.W5に対応する離散的な距離関数として定義される [4], [3]。
+
+\begin{definition}[Severance Distance $d_S$]
+倫理的断絶が引き起こす深刻度を測る Severance Distance $d_S$ は、Ax.W1からAx.W5の階層に従い、次の離散値を取る [4], [3]。
+\[
+d_S \in \{0, 1, 2, 3, 4\}
+\]
+\end{definition}
+
+\begin{itemize}
+    \item $d_S = 0$ は Ax.W1 違反（普遍的基盤の破壊）に対応し、最も回避すべき断絶である [5], [3]。
+    \item $d_S = 4$ は Ax.W5 違反（ローカルな可逆的断絶）に対応し、最も浅い階層である [5], [3]。
+\end{itemize}
+距離が小さいほど、回避すべき倫理勾配が大きいことを示す [4], [3]。
+
+\subsection{W-weighted Gradient (RBA への適用)}
+RBAによる構造的複雑性 \(C\) の調整量 \(\Delta C\) は、Severance Distance \(d_S\) に依存し、Severance の深刻度に応じて \(C\) の増大を強制する [4], [5], [8]。
+
+\[
+\Delta C = \alpha \cdot \frac{1}{d_S + \epsilon} \tag{3.1}
+\]
+ここで、\(\alpha\) は調整係数、\(\epsilon\) は \(d_S=0\) でのゼロ除算を回避するための微小量である [4], [5], [8]。
+
+Ax.W1 違反（$d_S=0$）が発生した場合、この数式により RBA は**最大の調整勾配**を適用し、**構造的複雑性 $C$ の急速な増大（RCD）**を強制する [5], [8]。これにより、Severance の深刻度に応じた**不可逆性の担保**が強化される [5], [8]。
+
+\end{document}
