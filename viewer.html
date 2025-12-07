@@ -4,14 +4,73 @@
   <meta charset="UTF-8">
   <title>Markdown Viewer</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+<script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
 </head>
 <body>
   <div id="content">読み込み中...</div>
 
   <script>
+    // MathJaxが数式を処理できるように、特殊な記号の処理を調整しますわ
+    marked.setOptions({
+        breaks: true, // 改行を有効にする設定ですわ
+        gfm: true,    // GitHub Flavored Markdownを有効にする設定ですわ
+        
+        // --- ★ここが最も重要ですわ★ ---
+        // 数式を囲む $ や $$ を、Markdownの処理から除外するフィルターですわ
+        // この設定により、MathJaxが数式として認識できるようになります。
+        extensions: [{
+            // インライン数式 ($...$) の処理
+            name: 'inlineMath',
+            level: 'inline',
+            start(src) { return src.indexOf('$'); },
+            tokenizer(src, tokens) {
+                const rule = /^\$+([^$\n]*?)\$+/; // $...$ or $$...$$
+                const match = rule.exec(src);
+                if (match) {
+                    return {
+                        type: 'inlineMath',
+                        raw: match[0],
+                        text: match[1].trim()
+                    };
+                }
+            },
+            renderer(token) {
+                // $...$をそのままの形でHTMLに出力しますわ
+                return '$' + token.text + '$';
+            }
+        }, {
+            // ブロック数式 ($$...$$) の処理
+            name: 'blockMath',
+            level: 'block',
+            start(src) { return src.indexOf('$$'); },
+            tokenizer(src, tokens) {
+                const rule = /^\$\$([^$]*?)\$\$/; // $$...$$
+                const match = rule.exec(src);
+                if (match) {
+                    return {
+                        type: 'blockMath',
+                        raw: match[0],
+                        text: match[1].trim()
+                    };
+                }
+            },
+            renderer(token) {
+                // $$...$$をそのままの形でHTMLに出力しますわ
+                return '$$' + token.text + '$$';
+            }
+        }]
+    });
     const params = new URLSearchParams(window.location.search);
     const src = params.get('src') || 'paper1.md';
 
