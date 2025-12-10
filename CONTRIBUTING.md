@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing!
 
-This project explores a new ethical framework that emerged from speculative history and evolved into a formal system of generative ethics. It is still in development, and your insights are welcome.
+This project explores a new ethical system (IEP, GSE, Theorem RCD) that establishes universal ethics and is currently evolving. We welcome your opinions and cooperation.
 
 ## Ways to Contribute
 
@@ -31,7 +31,7 @@ We look forward to your resonance.
 
 ご関心をお寄せいただき、ありがとうございます！
 
-本プロジェクトは、架空史から生まれた新しい倫理体系（IEP・GSE・Theorem RCD）を探究するもので、現在も進化の途上にあります。皆さまのご意見・ご協力を歓迎します。
+本プロジェクトは、普遍的倫理を確立した新しい倫理体系（IEP・GSE・Theorem RCD）を探究するもので、現在も進化の途上にあります。皆さまのご意見・ご協力を歓迎します。
 
 ## 参加の方法
 
