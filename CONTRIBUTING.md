@@ -20,8 +20,8 @@ This project explores a new ethical framework that emerged from speculative hist
 ## How to Start
 
 1. Read the [README](./README.md) to understand the project.
-2. Open an [issue](https://github.com/your-repo/issues) to start a discussion.
-3. Or join the [Discussions](https://github.com/your-repo/discussions) tab to share broader thoughts.
+2. Open an [issue](https://github.com/toyoashiharanonakatsukun-alt/-/issues) to start a discussion.
+3. Or join the [Discussions](https://github.com/toyoashiharanonakatsukun-alt/-/discussions) tab to share broader thoughts.
 
 We look forward to your resonance.
 
@@ -39,8 +39,8 @@ We look forward to your resonance.
 - 定義や形式言語の改善提案
 - 応用領域（AI倫理、制度設計など）への展開提案
 - 他言語への翻訳
-- 疑問点や提案を [Issue](https://github.com/your-repo/issues) に投稿
-- 哲学的な問いや雑談を [Discussions](https://github.com/your-repo/discussions) で共有
+- 疑問点や提案を [Issue](https://github.com/toyoashiharanonakatsukun-alt/-/issues) に投稿
+- 哲学的な問いや雑談を [Discussions](https://github.com/toyoashiharanonakatsukun-alt/-/discussions) で共有
 
 ## 補足
 
@@ -50,7 +50,7 @@ We look forward to your resonance.
 ## はじめ方
 
 1. [README](./README.md) を読んで、プロジェクトの全体像を把握してください。
-2. 気になる点があれば [Issue](https://github.com/your-repo/issues) を立ててください。
-3. より広い対話や提案は [Discussions](https://github.com/your-repo/discussions) へどうぞ。
+2. 気になる点があれば [Issue](https://github.com/toyoashiharanonakatsukun-alt/-/issues) を立ててください。
+3. より広い対話や提案は [Discussions](https://github.com/toyoashiharanonakatsukun-alt/-/discussions) へどうぞ。
 
 あなたの共鳴をお待ちしています。
