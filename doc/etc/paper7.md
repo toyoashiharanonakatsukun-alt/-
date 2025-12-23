@@ -524,8 +524,9 @@ AEに挟まれた中で、**B群とCとDの相互作用**が、**真に未決定
 
 ## 参考文献
 
-Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+Kant, I. (1781). Kritik der reinen Vernunft. (English trans. by Meiklejohn, J. M. D., available via Project Gutenberg). （邦訳　イマヌエル・カント著『純粋理性批判』1781年）
 
+Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
 
 
 
