@@ -1,4 +1,5 @@
-# 八層構造モデルに基づくクオリア（層6）の構造的本質：生命の動的駆動源と意識の起源
+# 八層構造モデルに基づくクオリアの存在論的考察：意識に先行する生命の駆動源
+# Ontological Considerations of Qualia based on the 8-Layer Framework: The Life-Driving Force Preceding Consciousness
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 Date：12/2025
