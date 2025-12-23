@@ -1,5 +1,5 @@
 # 八層構造モデルによる形而上と形而下の接続構造の解明
-
+# Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
