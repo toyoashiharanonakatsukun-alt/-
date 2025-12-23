@@ -2,6 +2,7 @@
 **（Ontological Considerations of Qualia based on the 8-Layer Framework: The Life-Driving Force Preceding Consciousness）**
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
+
 Date：12/2025
 
 ## 概要（Abstract）
