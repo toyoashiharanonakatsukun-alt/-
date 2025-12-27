@@ -167,5 +167,5 @@ Libet, B., Gleason, C. A., Wright, E. W., & Pearl, D. K. (1983). Time of conscio
 
 Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
 
-Nakatsu Mitsuhiro, "paper7: 八層構造モデルによる形而上と形而下の接続構造の解明" (2025).
+Nakatsu Mitsuhiro, "八層構造モデルによる形而上と形而下の接続構造の解明" (2025).
 
