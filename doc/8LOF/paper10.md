@@ -1,7 +1,7 @@
 
 # 静的かつ動的一元論の構築：「未分クオリア」による主客統合の構造的一元論の提唱
 
-**Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia**
+**(Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia)**
 
 Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
 
