@@ -9,13 +9,33 @@ This project provides a structural synthesis of metaphysics and physics, offerin
 **Title:** 八層構造モデルによる形而上と形而下の接続構造の解明  
 **English Title:** Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework  
 
-- **Abstract:** This paper elucidates the fundamental architecture of the 8LOF, bridging the gap between metaphysical logic and physical reality. It defines the eight-layer structure as a unified map for understanding existence.
+- **Abstract:**
+This paper elucidates the fundamental architecture of the 8LOF, bridging the gap between metaphysical logic and physical reality. It defines the eight-layer structure as a unified map for understanding existence.
 
 ### 2. [Paper 8] Ontological Considerations of Qualia based on 8LOF
 **Title:** 八層構造モデルに基づくクオリアの存在論的考察：意識に先行する生命の駆動源  
 **English Title:** Ontological Considerations of Qualia based on the 8-Layer Framework: The Life-Driving Force Preceding Consciousness  
 
-- **Abstract:** This paper redefines Qualia (Layer 6) not as a byproduct of the brain, but as the primordial drive of life. By introducing the concept of "Primordial Qualia (C1)," it provides a structural reinterpretation of Benjamin Libet's experiments.
+- **Abstract:** 
+This paper redefines Qualia (Layer 6) not as a byproduct of the brain, but as the primordial drive of life. By introducing the concept of "Primordial Qualia (C1)," it provides a structural reinterpretation of Benjamin Libet's experiments.
+
+### 3. [Paper 10] Structural Monism as an Ontological Foundation
+**Title:** 静的かつ動的一元論の構築：「未分クオリア」による主客統合の構造的一元論の提唱  
+**English Title:** Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia  
+
+- **Abstract:**
+This paper proposes "Structural Monism" as a new ontological foundation, integrating subjective monism with objective pluralism by repositioning Layer 6 (Qualia/Phase C) of the 8-Layer Ontological Framework as the fundamental basis of reality. While traditional ontologies have often diverged into either objective materialism or subjective idealism, this model achieves a non-contradictory synthesis by redefining the duality of qualia—objectively unknowable yet subjectively knowable—as two sides of a unitary reality.
+
+The core of this theory lies in the following three structural features:
+
+Internalization of Epistemological Boundaries: The AE layers (the realm of the unknowable) are not independent entities external to qualia but are understood as the inherent "depth" of epistemological limits within the unitary existence of qualia.
+
+Integration through Mediation: Matter and consciousness are treated not as distinct substances, but as different facets—"medium" and "quality"—within a singular generative process.
+
+Dynamic Self-Containment: By situating the driving force of "undifferentiated qualia" at the center, the system continuously generates new states from within, establishing an autonomous ontology that precludes the need for an external "First Cause."
+
+By reconfiguring existing philosophical conflicts as mere "cross-talk between different layers," this structural monism maintains the functional utility of the 8-layer map while providing a comprehensive account of both static architectural consistency and the dynamic, life-driven generation of the future.
+
 
 ---
 
