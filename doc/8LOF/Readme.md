@@ -26,17 +26,6 @@ This paper redefines Qualia (Layer 6) not as a byproduct of the brain, but as th
 - **Abstract:**
 This paper proposes "Structural Monism" as a new ontological foundation, integrating subjective monism with objective pluralism by repositioning Layer 6 (Qualia/Phase C) of the 8-Layer Ontological Framework as the fundamental basis of reality. While traditional ontologies have often diverged into either objective materialism or subjective idealism, this model achieves a non-contradictory synthesis by redefining the duality of qualia—objectively unknowable yet subjectively knowable—as two sides of a unitary reality.
 
-The core of this theory lies in the following three structural features:
-
-Internalization of Epistemological Boundaries: The AE layers (the realm of the unknowable) are not independent entities external to qualia but are understood as the inherent "depth" of epistemological limits within the unitary existence of qualia.
-
-Integration through Mediation: Matter and consciousness are treated not as distinct substances, but as different facets—"medium" and "quality"—within a singular generative process.
-
-Dynamic Self-Containment: By situating the driving force of "undifferentiated qualia" at the center, the system continuously generates new states from within, establishing an autonomous ontology that precludes the need for an external "First Cause."
-
-By reconfiguring existing philosophical conflicts as mere "cross-talk between different layers," this structural monism maintains the functional utility of the 8-layer map while providing a comprehensive account of both static architectural consistency and the dynamic, life-driven generation of the future.
-
-
 ---
 
 ## 💎 Core Concept: The 8-Layer Model
