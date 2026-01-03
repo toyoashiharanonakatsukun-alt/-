@@ -11,7 +11,7 @@ This project provides a structural synthesis of metaphysics and physics, offerin
 
 - **Abstract:** This paper elucidates the fundamental architecture of the 8LOF, bridging the gap between metaphysical logic and physical reality. It defines the eight-layer structure as a unified map for understanding existence.
 
-### 2. [Paper 8-2] Ontological Considerations of Qualia based on 8LOF
+### 2. [Paper 8] Ontological Considerations of Qualia based on 8LOF
 **Title:** 八層構造モデルに基づくクオリアの存在論的考察：意識に先行する生命の駆動源  
 **English Title:** Ontological Considerations of Qualia based on the 8-Layer Framework: The Life-Driving Force Preceding Consciousness  
 
