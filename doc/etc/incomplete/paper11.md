@@ -1,4 +1,4 @@
-# paper11 草案：構造的一元論から汎用的世界記述方法論へ
+# 構造的一元論から汎用的世界記述方法論へ
 **（From Structural Monism to a General Descriptive Methodology: Reinterpreting Problems through Layers and Connections）**
 
 ## 概要（Abstract）
