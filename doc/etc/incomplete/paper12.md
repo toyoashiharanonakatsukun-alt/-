@@ -1,6 +1,6 @@
-# 第一因は「構造」だった ― 八層構造モデルによる存在論的再定義：存在の自己完結的システムによる形而上学的究極因の解明
+# 「第一因」の構造的転換―「不動の動者」から「構造的閉包性」へ
 
-**（）**
+**（The Structural Shift of the "First Cause": From the Unmoved Mover to Structural Closure）**
 
 ## 概要（Abstract）
 
