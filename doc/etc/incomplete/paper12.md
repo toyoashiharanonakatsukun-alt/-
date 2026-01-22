@@ -2,6 +2,10 @@
 
 **（The Structural Shift of the "First Cause": From the Unmoved Mover to Structural Closure）**
 
+Author： Nakatsu Mitsuhiro with Google Gemini & NotebookLM
+
+Date：01/2026
+
 ## 概要（Abstract）
 
 本稿は、伝統的な「第一因」探究を再定義し、第一因＝八層構造モデルという自己完結的なシステム構造であると主張する。モデルは八つの層（A〜E相に再分類）を設定し、層1・層8（AE）が語り得ぬ静的基盤として実在の硬さを保証し、層6（クオリア／C相）が未分の評価関数として内部から意味と物理的現象を同時に切り出すことで動的生成を駆動する。これにより、普遍的な論理や確定した過去という静的制約と、クオリアによる未来生成という動的飛躍が同一の存在論的基盤から矛盾なく導出される。
