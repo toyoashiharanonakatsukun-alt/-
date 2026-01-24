@@ -382,8 +382,8 @@ Q1で論じたように、クオリアの「客観的不可知・主観的可知
 
 **（3）段階的理解:**
 本モデルのC1～C4の区分は、「クオリアがあるかないか」という二値的問いを、「どの段階のクオリアがあるか」という段階的問いに変換する:
-- 昆虫: C1（原始）～C2（構造化）レベル
-- 魚類・両生類: C2～C3（統御）レベル
+- 昆虫: C1（原始）～C2（構造化）レベル（？）
+- 魚類・両生類: C2～C3（統御）レベル（？）
 - 哺乳類・鳥類: C3～C4（意識）レベル
 
 **（4）倫理的含意:**
@@ -449,3 +449,9 @@ Libet, B., Gleason, C. A., Wright, E. W., & Pearl, D. K. (1983). Time of conscio
 Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
 
 Nakatsu Mitsuhiro, "八層構造モデルによる形而上と形而下の接続構造の解明" (2025).
+
+### 補遺部分
+
+Sneddon, L. U. (2003). The evidence for pain in fish: The use of morphine as an analgesic. Applied Animal Behaviour Science, 83(2), 153–162.
+
+Khuong, T. M., Wang, Q. P., Manion, J., Oyston, L. J., Lau, M. T., Towler, H., Lin, Y. Q., Neely, G. G. (2019). Nerve injury drives a heightened state of vigilance and neuropathic sensitization in Drosophila. Science Advances, 5(7), eaaw4099. 
