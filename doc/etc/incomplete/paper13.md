@@ -1,9 +1,12 @@
 # 価値の存在論的基礎と時間的動態
 ## 八層構造モデルに基づく価値テンソル理論
 
+Author： Nakatsu Mitsuhiro with Gemini & Claude
+Date：02/2026
+
 ---
 
-## 要旨
+## 要旨（Abstract）
 
 本論文は、価値論における三つの根本的課題—客観性、実利性、認識可能性—を同時に満たす価値の記述理論を提示する。従来の価値論は、主観主義と客観主義の二項対立、あるいは相対主義と普遍主義の間で揺れ動いてきた。本理論は、実在を八つの層に分類する構造的一元論を基盤とし、価値をクオリアから生成される三成分のテンソル構造として定式化することで、この難問を解決する。
 
@@ -1116,3 +1119,4 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
