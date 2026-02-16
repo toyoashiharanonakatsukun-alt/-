@@ -1,5 +1,4 @@
-# paper13：意味の自律性
-## 八層構造モデルにおける外部依拠なき形而上学的完結
+# 八層構造モデルにおける外部依拠なき形而上学的完結
 **(Autonomy of Meaning: Metaphysical Closure without External Dependency in the 8-Layer Framework)**
 
 ### 0. 概要（Abstract）
