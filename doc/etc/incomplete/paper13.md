@@ -799,36 +799,6 @@ $$\lim_{t \to \infty} \text{Var}(V_{m,B,i}) = \text{平衡値}$$
 
 ---
 
-## 参考文献
-
-### 現象学・意識の哲学
-- Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
-- Merleau-Ponty, M. (1945). *Phénoménologie de la perception*
-- Chalmers, D. (1996). *The Conscious Mind*
-- Nagel, T. (1974). "What Is It Like to Be a Bat?" *Philosophical Review*
-
-### 価値論
-- Moore, G. E. (1903). *Principia Ethica*
-- Scheler, M. (1913). *Der Formalismus in der Ethik und die materiale Wertethik*
-- Perry, R. B. (1926). *General Theory of Value*
-- Anderson, E. (1993). *Value in Ethics and Economics*
-
-### 心理学・認知科学
-- Kahneman, D., & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk"
-- Damasio, A. (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*
-- LeDoux, J. (1996). *The Emotional Brain*
-- Slovic, P. (2007). "If I look at the mass I will never act"
-
-### 構造主義・ポスト構造主義
-- Lévi-Strauss, C. (1958). *Anthropologie structurale*
-- Foucault, M. (1966). *Les Mots et les choses*
-- Deleuze, G., & Guattari, F. (1980). *Mille Plateaux*
-
-### 数理・形式化
-- Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
-- von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
-- Fishburn, P. C. (1970). *Utility Theory for Decision Making*
-
 ---
 
 ## 付録
@@ -876,7 +846,273 @@ $$
 
 ---
 
-**文書作成日**: 2026年2月16日  
-**著者**: [執筆者名]  
+---
 
-**所属**: [所属機関]
+## 補遺：想定コメントへの先回り注釈（Q&A）
+
+本補遺は、本論文に対して想定される主要な査読コメントに対し、
+理論的立場・射程・非主張点を明確化することを目的とする。
+ここでの回答は、反論というよりも**論点の層配置を明示するための注釈**である。
+
+
+### Q1.
+
+**「価値をクオリアに基礎づけるのは主観主義ではないか？」**
+
+### A1.
+
+本理論は**主観主義を採用していない**。
+価値の**生成起点**をクオリアに置いているが、
+価値の**妥当性・安定性・社会的効力**をクオリアに還元してはいない。
+
+本理論における区別は以下である：
+
+* **生成起点**：C層（クオリア）
+* **構造的制約**：pastE、B層資源
+* **社会的安定**：層4・5を通じた間主観的収束
+
+したがって本理論は
+「価値は主観的である」ではなく、
+**「価値は主観的に生成され、構造的に制約され、社会的に調整される」**
+という立場を取る。
+
+これは主観主義ではなく、**構造的生成論**である。
+
+
+### Q2.
+
+**「間主観的収束を“客観性”と呼ぶのは弱くないか？」**
+
+### A2.
+
+本論文は、**強い意味での絶対的客観性を主張していない**。
+主張しているのは以下である：
+
+* 価値には
+
+  * 絶対的客観性は存在しない
+  * しかし、**恣意性だけが残るわけでもない**
+
+本論文が提示するのは
+**近似的・動的・再検証可能な客観性**である。
+
+これは科学理論における
+
+* 観測依存性
+* 理論更新可能性
+
+と同型であり、
+「完全一致」ではなく「再現的安定性」を客観性の条件とする。
+
+
+### Q3.
+
+**「価値テンソルの成分（Va, Vm, Vatt）は恣意的ではないか？」**
+
+### A3.
+
+三成分は恣意的に選ばれていない。
+それぞれは以下の**異なる機能要請**に対応している：
+
+* $V_a$：行為方向性（接近／回避）
+* $V_m$：重要度・犠牲許容度
+* $V_{att}$：注意資源配分
+
+重要なのは、
+これらが**相互に還元不能である**ことが、
+日常的・臨床的・社会的現象によって裏付けられている点である。
+
+例：
+
+* 重要だが注意が向かないもの（空気）
+* 注意を奪うが重要でないもの（通知）
+* 行為方向が決まらないが重要なもの（葛藤）
+
+したがって三成分は
+**心理的・行為論的独立性**に基づく最小分解である。
+
+
+### Q4.
+
+**「Distance関数は後付け説明ではないか？」**
+
+### A4.
+
+Distanceは、後付けの補助概念ではなく、
+**価値の相対性を体系的に扱うための統一概念**である。
+
+本理論以前の価値論では：
+
+* 時間割引
+* 空間的距離
+* 内集団バイアス
+* 抽象度効果
+* 想像の具体性
+
+が**個別理論として断片的に存在**していた。
+
+Distance概念は、
+これらを**価値テンソルへの変調関数**として統合するための
+メタ概念である。
+
+したがって説明力の増大は
+「後付け」ではなく「統一によるもの」である。
+
+
+### Q5.
+
+**「実証不可能ではないか？」**
+
+### A5.
+
+本理論は**直接的な完全実証を主張していない**。
+むしろ、以下を明示的に区別している：
+
+* 実証可能な部分
+
+  * 価値変調の方向性
+  * Distance効果の存在
+  * 社会的収束の傾向
+
+* 原理的に不可知な部分
+
+  * 個体固有のパラメータ（マスク変数）
+  * Imagine関数の内部構造
+
+これは
+「全てを測定可能にする」立場ではなく、
+**不可知性を含んだまま形式化する立場**である。
+
+その意味で本理論は
+実証主義ではなく、**制約付き構造理論**である。
+
+
+### Q6.
+
+**「倫理的規範を導けないのでは？」**
+
+### A6.
+
+本論文は**規範倫理の直接的基礎づけを目的としていない**。
+目的は以下である：
+
+* 倫理的判断が
+
+  * どの層で
+  * どの価値成分に基づき
+  * どのように衝突・収束するか
+
+を**記述可能にすること**。
+
+規範は
+
+* 層4（制度）
+* 層2（共有概念）
+
+で形成されるが、
+その**形成過程の透明化**が本理論の貢献である。
+
+したがって本理論は
+倫理を「与える」のではなく、
+**倫理が生成・更新される条件を与える**。
+
+### Q7.
+
+**「他の価値理論とどう違うのか？」**
+
+### A7.
+
+本理論の独自性は、以下の**同時成立**にある：
+
+1. クオリアを排除しない（反還元主義）
+2. 数理的形式化を行う（反神秘主義）
+3. 社会的収束を組み込む（反独我論）
+4. 不可知性を明示的に残す（反全知主義）
+
+既存理論の多くは、
+これらのいずれかを切り捨てることで整合性を保ってきた。
+
+本理論は、
+**切り捨てずに層として配置する**点に独自性がある。
+
+### Q8.
+
+**「理論が包括的すぎて反証不能では？」**
+
+### A8.
+
+包括性と反証不能性は同一ではない。
+
+本理論が主張するのは：
+
+* 価値は必ずテンソル構造を持つ
+* Distanceは必ず変調効果を持つ
+* 社会的価値は完全には収束しない
+
+これらが否定される事例が示されれば、
+理論は部分的に棄却されうる。
+
+ただし本理論は
+**単一事例による即時反証を想定していない**。
+これは進化理論・構造主義理論と同様である。
+
+### Q9.
+
+**「この理論の限界は何か？」**
+
+### A9.
+
+本理論の限界は明示的である：
+
+* 個体差の完全記述は不可能
+* 未来価値の精密予測は不可能
+* 価値の最終的正当化は与えない
+
+しかしこれは欠陥ではなく、
+**価値という対象の性質に由来する制約**である。
+
+本理論は
+「それ以上を語れない地点」を
+理論内部に明示的に組み込む。
+
+## 最終注記（査読者向け）
+
+本論文は、
+価値を「決着させる理論」ではなく、
+**価値について語るための地形図を与える理論**である。
+
+意見の一致を目指すのではなく、
+**どこで一致できず、なぜ一致できないかを可視化する**
+そのための枠組みである。
+
+---
+
+## 参考文献
+
+### 現象学・意識の哲学
+- Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
+- Merleau-Ponty, M. (1945). *Phénoménologie de la perception*
+- Chalmers, D. (1996). *The Conscious Mind*
+- Nagel, T. (1974). "What Is It Like to Be a Bat?" *Philosophical Review*
+
+### 価値論
+- Moore, G. E. (1903). *Principia Ethica*
+- Scheler, M. (1913). *Der Formalismus in der Ethik und die materiale Wertethik*
+- Perry, R. B. (1926). *General Theory of Value*
+- Anderson, E. (1993). *Value in Ethics and Economics*
+
+### 心理学・認知科学
+- Kahneman, D., & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk"
+- Damasio, A. (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*
+- LeDoux, J. (1996). *The Emotional Brain*
+- Slovic, P. (2007). "If I look at the mass I will never act"
+
+### 構造主義・ポスト構造主義
+- Lévi-Strauss, C. (1958). *Anthropologie structurale*
+- Foucault, M. (1966). *Les Mots et les choses*
+- Deleuze, G., & Guattari, F. (1980). *Mille Plateaux*
+
+### 数理・形式化
+- Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
+- von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
+- Fishburn, P. C. (1970). *Utility Theory for Decision Making*
