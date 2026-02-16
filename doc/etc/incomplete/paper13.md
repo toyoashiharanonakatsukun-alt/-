@@ -1,5 +1,5 @@
-# 価値の存在論的基礎と時間的動態
-## 八層構造モデルに基づく価値テンソル理論
+# 価値論における客観性・実利性・認識可能性の同時達成：構造的一元論に基づく価値テンソル理論
+## Simultaneous Achievement of Objectivity, Practicality, and Recognizability in Axiology:A Value Tensor Theory Based on Structural Monism
 
 Author： Nakatsu Mitsuhiro with Gemini & Claude
 Date：02/2026
@@ -1119,4 +1119,5 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
