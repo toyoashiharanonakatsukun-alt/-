@@ -642,9 +642,9 @@ $$\frac{dV_{m,B,i}}{dt} = -\lambda_i (V_{m,B,i} - V_{m,\text{local}_{\text{field
 
 ここで
 - $\lambda_i$: 同調矯正力（層4の強度）
-- $V_{m,\text{local}_{\text{field}}$: 周囲の標準価値（層5）
+- $V_{m,\text{local}_{\text{field}}}$: 周囲の標準価値（層5）
 - $\eta_i$: 拡散係数（情報伝播）
-- $\nabla^2 V_{m,\text{field}}}$: 価値場のラプラシアン（周囲の平均と比べてどれだけズレているか）
+- $\nabla^2 V_{m,\text{field}}$: 価値場のラプラシアン（周囲の平均と比べてどれだけズレているか）
 - $\xi_i$: 創発的革新（ランダム項）
 
 **集団全体の価値場**
@@ -1129,6 +1129,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
