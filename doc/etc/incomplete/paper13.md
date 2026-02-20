@@ -309,19 +309,25 @@ $$\text{Dist}_{\text{Expect}} = \text{基準状態からの乖離}$$
 
 $$\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}})$$
 
+> 遡及的期待Distanceは、現在のクオリアと順応ベースラインの間の距離（$d$）として算出される。
+
 $$C_{\text{baseline}} = \int C(\tau) e^{-\lambda(t-\tau)} d\tau$$
 
-$C_{\text{baseline}}$ は、pastEから構築される**順応ベースライン**である。最近の経験の加重平均として定義される。
+> $C_{\text{baseline}}$ は、pastEから構築される**順応ベースライン**である。ベースラインは、過去の制約（pastE）に基づき、直近の経験を減衰係数（$\lambda$）で加重平均した動的な基準点である。
 
 順応が完了すると、$C_{\text{baseline}}$ が安定し、$\text{Dist}_{\text{Expect}} \to 0$ となる。
 
-> 遡及的期待Distanceは、現在のクオリアと順応ベースラインの間の距離（$d$）として算出される。ここでベースラインは、過去の制約（pastE）に基づき、直近の経験を減衰係数（$\lambda$）で加重平均した動的な基準点である。環境への順応が完了しベースラインが安定すると、期待Distanceはゼロに収束する。
+> 環境への順応が完了しベースラインが安定すると、期待Distanceはゼロに収束する。
 
 **予期的期待：現在→未来（anticipatory）**
 
 $$\text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}(t_{\text{future}}), C_{\text{current}})$$
 
+> 予期的期待Distanceは、現在のクオリア（$C_{\text{current}}$）と、将来時点に対して構築された想像上のクオリア（$C_{\text{imagined}}$）との乖離を示す。
+
 $$C_{\text{imagined}} = \text{Imagine}(C_{\text{current}}, \text{pastE}, B_{\text{resources}}, t)$$
+
+> 想像の状態（$C_{\text{imagined}}$）は、記憶、気分、概念的リソース（$B_{\text{resources}}$）を変数とする「Imagine関数」によって生成される。
 
 $C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築である。
 
@@ -1150,6 +1156,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
