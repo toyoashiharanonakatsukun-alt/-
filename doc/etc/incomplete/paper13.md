@@ -48,7 +48,7 @@ Date：02/2026
 
 ### 1.3 論文の構成
 
-第2節では、理論的基盤となる八層構造モデルを提示する。第3節では、価値テンソルの基本構造を定義し、各成分の独立性と相互作用を論じる。第4節では、価値生成の時間的プロセスを、認識フェイズと思弁フェイズに分けて詳述する。第5節では、距離（Distance）概念を導入し、価値の変調メカニズムを説明する。第6節では、社会的価値収束のメカニズムを論じる。第7節で、価値衝突の分類と解決方法を示す。第8節で結論を述べる。
+第2節では、理論的基盤となる八層構造モデルを提示する。第3節では、価値テンソルの基本構造を定義し、各成分の独立性と相互作用を論じる。第4節では、価値生成の時間的プロセスを、感覚フェイズと思弁フェイズに分けて詳述する。第5節では、距離（Distance）概念を導入し、価値の変調メカニズムを説明する。第6節では、社会的価値収束のメカニズムを論じる。第7節で、価値衝突の分類と解決方法を示す。第8節で結論を述べる。
 
 ---
 
@@ -331,7 +331,9 @@ $$C_{\text{imagined}} = \text{Imagine}(C_{\text{current}}, \text{pastE}, B_{\tex
 
 $C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築である。
 
-**Imagine関数の扱い**: Imagine関数は**ブラックボックス**として定義される。記憶、気分、状況に依存し、同一人物でも同一対象に同一想像をするとは限らない。定式化不能、厳密には定量化不能であり、事後的に行為全体から逆算して推測することのみ可能である。
+**Imagine関数の扱い**: Imagine関数は**ブラックボックス**として定義される。これは個人の記憶・知識や環境、時と場合に依存し、同一主体であっても常に同一の想像を生成するとは限らず、厳密な定量化が不可能なためである。
+
+これにより、本理論ではImagine関数を「行為の結果から事後的に逆算・推測することのみが可能な不可知のプロセス」として扱う。
 
 ---
 
@@ -339,7 +341,9 @@ $C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築で�
 
 $$V_{a,\text{primitive}} = (V_{a,\text{pos},\text{primitive}}, V_{a,\text{neg},\text{primitive}})$$
 
-両方が**同時に生成**される。
+> 原始的親和極性（$V_{a,\text{primitive}}$）は、対象に対する生得的な接近動機（正の値）と回避動機（負の値）のペアとして定義される。
+
+「生への親和極性」の正負両方の値が**同時に生成**される。
 
 脳内メカニズム: 扁桃体レベルの生得的接近/回避反応
 
@@ -349,11 +353,15 @@ $$V_{a,\text{primitive}} = (V_{a,\text{pos},\text{primitive}}, V_{a,\text{neg},\
 
 $$V_{m,\text{raw}} = |V_{a,\text{pos},\text{primitive}}| + |V_{a,\text{neg},\text{primitive}}|$$
 
+> 思弁フェイズ以前の未加工の価値強度（$V_{m,\text{raw}}$）は、原始的な接近・回避の両動機の絶対値を合算した、全エネルギー量として算出される。
+
 ---
 
 #### Phase 4: 知覚変換
 
 $$V_{m,C} = h(V_{m,\text{raw}})$$
+
+> クオリア層における価値強度（$V_{m,C}$）は、未加工の強度を知覚変換関数 $h$（対数則等）に通し、心理的な飽和を反映させることで得られる。
 
 ---
 
@@ -361,7 +369,33 @@ $$V_{m,C} = h(V_{m,\text{raw}})$$
 
 $$\text{Conflict} = \min(|V_{a,\text{pos}}|, |V_{a,\text{neg}}|)$$
 
+> 内的葛藤（$\text{Conflict}$）は、接近と回避の二つの動機のうち、より小さい方の絶対値によって規定される。
+
 $$V_{att,C} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cdot \text{Conflict} + \gamma \cdot \text{Dist}_{\text{Expect}}^k$$
+
+> 感覚フェイズの注意価値（$V_{att,C}$）は、知覚された価値強度、期待乖離による増幅、内的葛藤、および非線形な期待効果の総和として決定される。
+
+**自動的注意**:
+
+Vatt,auto=Vm,C(1+α⋅DistExpect)+β⋅Conflict+γ⋅DistExpectkV_{att,\text{auto}} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cdot \text{Conflict} + \gamma \cdot \text{Dist}_{\text{Expect}}^kVatt,auto​=Vm,C​(1+α⋅DistExpect​)+β⋅Conflict+γ⋅DistExpectk
+
+刺激駆動的な注意。価値強度、予測誤差、葛藤によって自動的に生成される。
+​
+**意志的注意**:
+
+Vatt,voluntary=ω⋅AttentioncontrolV_{att,\text{voluntary}} = \omega \cdot \text{Attention}_{\text{control}}Vatt,voluntary​=ω⋅Attentioncontrol
+​
+Attentioncontrol\text{Attention}_{\text{control}} は主体による意志的な注意制御であり、ω\omega はその効果の強度である。
+
+意識による直接的な注意の向け直し。「今、これに注意を向けよう」という意識的決定。これにより注意価値が低い対象に対しても注意を向ける事ができる。
+
+**指示的注意**:
+
+Vatt,instructed​=Vatt,voluntary​(instructed target)
+
+外部からの指示や要請によって意志的注意が方向づけられる。他者からの「これに注意しなさい」という指示を受諾することにより意志的注意が対象に向く。
+
+元々、価値を切り出した時点で社会関係による制約が入っているが、注意すべき対象を明示的に指定されることによって意志的注意がその対象へ誘導される。
 
 ---
 
@@ -371,13 +405,35 @@ $$V_{att,C} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cd
 
 $$V_{a,\text{pos},\text{eff}} = V_{a,\text{pos}} \times f_{\text{time}}^{\text{pos}} \times \prod_i f_{\text{pos},i}(\text{Dist}_i)$$
 
+> 実効的な正の親和極性（$V_{a,\text{pos},\text{eff}}$）は、時間的な変調および物理的・社会的等の諸距離（Distance）に基づく変調関数の積によって算出される。
+
 $$V_{a,\text{neg},\text{eff}} = V_{a,\text{neg}} \times f_{\text{time}}^{\text{neg}} \times \prod_i f_{\text{neg},i}(\text{Dist}_i)$$
+
+> 実効的な負の親和極性（$V_{a,\text{neg},\text{eff}}$）は、正の極性とは独立した負専用の変調関数群（時間・諸距離）を適用することで決定される。
+
 
 $$V_{m,\text{eff}} = h(|V_{a,\text{pos},\text{eff}}| + |V_{a,\text{neg},\text{eff}}|)$$
 
+> 実効的な価値強度（$V_{m,\text{eff}}$）は、変調後の接近・回避動機の総和を再び知覚変換関数に通すことで得られる。
+
+
 $$V_{att,\text{eff}} = V_{att,C} \times \prod_i h_i(\text{Dist}_i)$$
 
-**認識フェイズ完了**: $V_C = (V_{a,\text{eff}}, V_{m,\text{eff}}, V_{att,\text{eff}})$
+> 実効的な注意価値（$V_{att,\text{eff}}$）は、クオリア層で生成された注意価値に対し、諸距離による減衰や強調を加味して最終決定される。
+
+
+**感覚フェイズ完了**: $V_C = (V_{a,\text{eff}}, V_{m,\text{eff}}, V_{att,\text{eff}})$
+
+> 感覚質的価値（$V_C$）は、これら全ての変調を経た「実効的な三成分」をベクトルとして統合することで確定する。
+
+#### 全体解説
+
+このセクションは、認識の極めて初期段階（クオリア層）において、価値がどのように「発生」し「変調」されるかのプロセスを記述しています。大きな特徴は以下の3点です。
+
+*  両価性の保持（Phase 2, 5）: 接近と回避を別々の値として保持することで、単なる「好き嫌い」の差し引き（スカラー値）では表現できない「激しい葛藤（両方の値が大きい状態）」を数学的に抽出可能にしています。
+*  物理・心理的飽和の導入（Phase 4）: 生理的な反応がそのまま価値になるのではなく、人間の知覚限界（ウェーバー・フェヒナーの法則等）を関数 $h$ で挟むことで、現実的な心理描写を行っています。
+*  多次元的な「距離」による変調（Phase 6）: ここでの「Distance」は物理的な距離だけでなく、時間の経過や社会的な遠さ、心理的な期待外れなどを指します。これらがフィルターのように作用することで、同じ対象であっても状況（距離）によって「実効的な価値」が変化する動的な仕組みを定式化しています。
+
 
 ---
 
@@ -387,15 +443,20 @@ $$V_{att,\text{eff}} = V_{att,C} \times \prod_i h_i(\text{Dist}_i)$$
 
 $$\text{if } V_{m,\text{eff}} < \theta_{\text{conscious}}: V_{\text{final}} = V_C$$
 
-価値強度が低く閾値未満の場合、意識に上らず、思弁の対象とならない。
+> 実効的な価値強度（$V_{m,\text{eff}}$）が意識化閾値（$\theta_{\text{conscious}}$）を下回る場合、その価値は思弁の対象とならず、感覚質的価値（$V_C$）がそのまま最終的な価値として出力される。
 
----
+価値強度が低い場合、思弁の対象とならず、思弁フェイズをスキップしてそのまま最終的な価値となる。
+
+目には入っているが特に何も感じないというような状態。
+
 
 #### 思弁的価値修正
 
 **意味の明示化**
 
 $$M_{\text{explicit}} = \text{Linguistify}(M_{\text{implicit}})$$
+
+> 明示的意味（$M_{\text{explicit}}$）は、潜在的な意味（$M_{\text{implicit}}$）を言語化関数（$\text{Linguistify}$）によって自然言語的な形式へと変換・定義することで生成される。
 
 自然言語的な「対象を指すもの」として定義される（例：「道を歩いている犬」「明日の締切」）。
 
@@ -433,7 +494,7 @@ $$(V_{m,B}, V_{a,B}, V_{att,B}) = \text{Deliberate}(V_C, M_{\text{explicit}}, B_
 
 各Distanceは、価値の各成分に**個別に・異なる形で**作用する。これは、価値の相対性を体系的に捉える概念装置である。
 
-### 5.2 Distance種別の完全分類
+### 5.2 Distance種別の暫定分類
 
 | カテゴリ | Distance | 定義 | 主な影響先 |
 |:---|:---|:---|:---|
@@ -1156,6 +1217,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
