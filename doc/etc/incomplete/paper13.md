@@ -202,7 +202,7 @@ $$\text{Dist}_{\text{Expect}} = \text{基準状態からの乖離}$$
 期待Distは**距離が遠いほどに価値が増幅され近いほどに価値が減衰する**ため距離の原則から外れるが、これは生物的な順応の機能に基づく。
 
 
-#### ２種の期待Distと順応
+#### 2種の期待Distと順応
 
 期待Distanceには、時間方向に応じて二種のメカニズムが存在する。
 
@@ -512,28 +512,30 @@ V_{att,\text{voluntary}} & \text{otherwise}
 
 $V_m$、$V_{att}$、$V_a$ が互いに独立である理由は、以下の三つの異なる因果経路が存在するからである。
 
-1. **経路1（親和性駆動）**: $V_a \to V_m \to V_{att}$
+1. **経路1（親和性駆動）**:
+
+   $V_a \to V_m \to V_{att}$
 
    > 「対象に対する生への親和極性、快・不快の方向性（$V_a$）が、その価値の大きさ（$V_m$）を決定し、その重要性に応じて自然と注意（$V_{att}$）が向けられる経路。」
 
-2. **経路2（注意駆動）**: $\text{Dist}_{\text{Expect}} \to V_{att} \to V_m$
+3. **経路2（注意駆動）**:
+ 
+   $\text{Dist}_{\text{Expect}} \to V_{att} \to V_m$
 
    > 「予測や期待からの乖離（$\text{Dist}_{\text{Expect}}$）がまず認識主体の注意（$V_{att}$）を強制的に惹きつけ、その結果として、対象の価値強度（$V_m$）が再評価・確定される経路。」
 
-   （能動的注意）: $\text{C層6} \to V_{att,\text{voluntary}}$
+   $\text{C層6} \to V_{att,\text{voluntary}}$
 
    > 「意識によって能動的に選択した対象の注意価値を高める。」
 
-3. **経路3（相乗効果）**: $V_a \land \text{Dist}_{\text{Expect}} \to V_m, V_{att}$
+5. **経路3（相乗効果）**:
+
+   $V_a \land \text{Dist}_{\text{Expect}} \to V_m, V_{att}$
 
    > 「特定の親和傾向（$V_a$）を持つ状態で期待を裏切る事象（$\text{Dist}_{\text{Expect}}$）が重なった際、価値強度（$V_m$）の増大と注意（$V_{att}$）の喚起が、互いを増幅させながら同時並行的に発生する経路。」
 
 
 いずれの成分も、他の二つから完全には決定されない。
-
-
-
-
 
 ### 4.4 価値の存在論的階層
 
@@ -553,6 +555,7 @@ $V_m$、$V_{att}$、$V_a$ が互いに独立である理由は、以下の三つ
 
 ---
 
+
 ## 5. 価値生成のプロセス
 
 価値は、二つの段階を経て生成される。
@@ -571,17 +574,10 @@ $$C_n = f_{\text{qualia}}(A, \text{pastE}_n, E)$$
 
 **重要**: $C_n$ はすでに pastE によって構造化されている。過去の社会通念、記憶、経験、物理的環境が、現在のクオリア生成を制約している。
 
----
 
-#### Phase 1: 期待的距離の計算
+#### Phase 1: 期待距離の測定
 
-**期待Dist**（$\text{Dist}_{\text{Expect}}$）は、**順応の本質**を捉える概念である。
-
-認識主体の「順応」の本質を数学的に捉える概念であり、基準状態からの乖離として定義される。
-
-$$\text{Dist}_{\text{Expect}} = \text{基準状態からの乖離}$$
-
-期待Distanceには、時間方向の指向性に応じて異なる二つの計算メカニズムが存在する。
+生成された感覚と期待された状態との差から**期待Dist**（$\text{Dist}_{\text{Expect}}$）が測定される。
 
 **遡及的期待：過去→現在（retrospective）**
 
@@ -589,27 +585,13 @@ $$\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{base
 
 > 遡及的期待Distanceは、現在のクオリアと順応ベースラインの間の距離（$d$）として算出される。
 
-$$C_{\text{baseline}} = \int C(\tau) e^{-\lambda(t-\tau)} d\tau$$
-
-> $C_{\text{baseline}}$ は、pastEから構築される**順応ベースライン**である。ベースラインは、過去の制約（pastE）に基づき、直近の経験を減衰係数（$\lambda$）で加重平均した動的な基準点である。
-
-順応が完了すると、$C_{\text{baseline}}$ が安定し、$\text{Dist}_{\text{Expect}} \to 0$ となる。
-
-> 環境への順応が完了しベースラインが安定すると、期待Distanceはゼロに収束する。
-
 **予期的期待：現在→未来（anticipatory）**
 
 $$\text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}(t_{\text{future}}), C_{\text{current}})$$
 
 > 予期的期待Distanceは、現在のクオリア（$C_{\text{current}}$）と、将来時点に対して構築された想像上のクオリア（$C_{\text{imagined}}$）との乖離を示す。
 
-$$C_{\text{imagined}} = \text{Imagine}(C_{\text{current}}, \text{pastE}, B_{\text{resources}}, t)$$
-
-> 想像の状態（$C_{\text{imagined}}$）は、記憶、気分、概念的リソース（$B_{\text{resources}}$）を変数とする「Imagine関数」によって生成される。
-
-$C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築である。
-
-**Imagine関数の扱い**: Imagine関数は**ブラックボックス**として定義される。記憶、気分、状況に依存し、同一人物でも同一対象に同一想像をするとは限らない。定式化不能、厳密には定量化不能であり、事後的に行為全体から逆算して推測することのみ可能である。
+遡及的期待が大きくともそれが予期されていた場合には期待距離は縮小し、逆に遡及的期待が小さくともそれが予期されていなかった場合には期待距離は縮小する。
 
 ---
 
@@ -645,7 +627,7 @@ $$V_{att,C} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cd
 
 #### Phase 6: Distance（距離）変調
 
-各成分に個別のDistance関数が作用する（詳細は第5節）
+各成分に個別のDistance関数が作用する（詳細は第3節）
 
 $$V_{a,\text{pos},\text{eff}} = V_{a,\text{pos}} \times f_{\text{time}}^{\text{pos}} \times \prod_i f_{\text{pos},i}(\text{Dist}_i)$$
 
@@ -1406,6 +1388,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
