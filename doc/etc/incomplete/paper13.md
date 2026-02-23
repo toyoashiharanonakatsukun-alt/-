@@ -252,7 +252,7 @@ $C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築で�
 
 **実効期待距離**
 
-$$\text{Dist}_{\text{Expect},\text{effective}} = |\text{Dist}_{\text{Expect},\text{retro}} - \text{Dist}_{\text{Expect},\text{anticip}}|$$
+$$\text{Dist}_{\text{Expect}} = |\text{Dist}_{\text{Expect},\text{retro}} - \text{Dist}_{\text{Expect},\text{anticip}}|$$
 
 > 実効期待距離は、遡及的期待距離（実際の変化）と予期的期待距離（予測されていた変化）の差の絶対値である。
 
@@ -275,10 +275,10 @@ $$\text{Dist}_{\text{Expect},\text{effective}} = |\text{Dist}_{\text{Expect},\te
 **実際（t=0）**:
 - $C_{\text{current}}$: 痛み
 - $C_{\text{baseline}}$: 平静
-- $\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) = 8$
+- $\text{Dist}_\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) = 8$
 
 **実効期待距離**:
-$$\text{Dist}_{\text{effective}} = |8 - 7| = 1$$
+$$\text{Dist}_{\text{Expect}} = |8 - 7| = 1$$
 
 **結果**: 予測通りなので期待Distは小さい
 
@@ -295,7 +295,7 @@ $$\text{Dist}_{\text{effective}} = |8 - 7| = 1$$
 - $\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) = 9$
 
 **実効期待距離**:
-$$\text{Dist}_{\text{effective}} = |9 - 0| = 9$$
+$$\text{Dist}_{\text{Expect}} = |9 - 0| = 9$$
 
 **結果**: 全く予測していないので期待Distは大きい
 
@@ -1395,6 +1395,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
