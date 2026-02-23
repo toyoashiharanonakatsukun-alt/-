@@ -579,17 +579,19 @@ $$C_n = f_{\text{qualia}}(A, \text{pastE}_n, E)$$
 
 生成された感覚と期待された状態との差から**期待Dist**（$\text{Dist}_{\text{Expect}}$）が測定される。
 
-**遡及的期待：過去→現在（retrospective）**
+**遡及的期待Distの測定**
 
 $$\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}})$$
 
-> 遡及的期待Distanceは、現在のクオリアと順応ベースラインの間の距離（$d$）として算出される。
+> 遡及的期待Distは、現在のクオリアと順応ベースラインの間の距離（$d$）として算出される。
 
-**予期的期待：現在→未来（anticipatory）**
+**予期的期待Distの測定**
 
 $$\text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}(t_{\text{future}}), C_{\text{current}})$$
 
-> 予期的期待Distanceは、現在のクオリア（$C_{\text{current}}$）と、将来時点に対して構築された想像上のクオリア（$C_{\text{imagined}}$）との乖離を示す。
+> 予期的期待Distは、現在のクオリア（$C_{\text{current}}$）と、将来時点に対して構築された想像上のクオリア（$C_{\text{imagined}}$）との乖離を示す。
+
+**実効期待距離の算定**
 
 遡及的期待が大きくともそれが予期されていた場合には期待距離は縮小し、逆に遡及的期待が小さくともそれが予期されていなかった場合には期待距離は縮小する。
 
@@ -1388,6 +1390,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
