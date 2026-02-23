@@ -189,7 +189,7 @@ $$\text{AE}_{n+1} = A \oplus \text{pastE}_{n+1} \xrightarrow{} C_{n+1}$$
 | 自我系 | $\text{Dist}_{\text{Ego}}$ | 自己イメージとの距離 | 
 | 文化系 | $\text{Dist}_{\text{Ethno}}$ | 自文化との距離 | 
 
----
+
 
 ### 3.3 期待的距離（期待Dist）
 
@@ -248,8 +248,59 @@ $C_{\text{imagined}}$ は、**Imagine関数**による未来状態の構築で�
 
 **Imagine関数の扱い**: Imagine関数は**ブラックボックス**として定義される。知識や記憶、その時の気分、置かれた状況に依存し、同一人物でも同一対象に同一想像をするとは限らない。定式化不能、厳密には定量化不能であり、事後的に行為全体から逆算して推測することのみ可能である。
 
+### 3.4 実効期待距離の算定
+
+**実効期待距離**
+
+$$\text{Dist}_{\text{Expect},\text{effective}} = |\text{Dist}_{\text{Expect},\text{retro}} - \text{Dist}_{\text{Expect},\text{anticip}}|$$
+
+> 実効期待距離は、遡及的期待距離（実際の変化）と予期的期待距離（予測されていた変化）の差の絶対値である。
+
+### 直観的意味
+
+```
+実際の変化 - 予測していた変化 = 予測誤差
+
+予測が正確 → 差が小さい → 驚きが小さい → 注意が小さい
+予測が不正確 → 差が大きい → 驚きが大きい → 注意が大きい
+```
+
+#### 例1: 予期された痛み（医療処置）
+
+**事前（t=-1日）**:
+- $C_{\text{current}}$: 平静な状態
+- $C_{\text{imagined}}(t=0)$: 痛みを伴う処置を想像
+- $\text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}, C_{\text{current}}) = 7$
+
+**実際（t=0）**:
+- $C_{\text{current}}$: 痛み
+- $C_{\text{baseline}}$: 平静
+- $\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) = 8$
+
+**実効期待距離**:
+$$\text{Dist}_{\text{effective}} = |8 - 7| = 1$$
+
+**結果**: 予測通りなので期待Distは小さい
+
+#### 例2: 突然の大きな音
+
+**事前**:
+- $C_{\text{current}}$: 静寂
+- $C_{\text{imagined}}$: 静寂が続くと予測
+- $\text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}, C_{\text{current}}) \approx 0$
+
+**実際**:
+- $C_{\text{current}}$: 大きな音
+- $C_{\text{baseline}}$: 静寂
+- $\text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) = 9$
+
+**実効期待距離**:
+$$\text{Dist}_{\text{effective}} = |9 - 0| = 9$$
+
+**結果**: 全く予測していないので期待Distは大きい
 
 
+---
 
 
 ## 4. 価値テンソルの基本構造
@@ -426,8 +477,6 @@ $$\rho(\text{instruction}) = f(B_{3,\text{self}}, B_4, B_5, \text{指示者と�
 - 指示による誘導の強度は、受容性 $\rho$ に依存
 - **この部分は原理的に完全には明確にできない**
 
----
-
 **注意価値の決定フロー**:
 
 注意価値は、以下の階層的プロセスで決定される：
@@ -468,8 +517,6 @@ ELSE:
     （定常的注意のみ）
 ```
 
----
-
 **数式による表現**:
 
 $$V_{att,\text{final}} = \begin{cases}
@@ -492,7 +539,6 @@ V_{att,\text{voluntary}} & \text{otherwise}
 - $f(\text{Dist}_{\text{Expect}})$: 期待距離による補正（予測との誤差が少ないと定常的注意よりも意志的注意を優先しやすい）
 
 
-
 **理論的含意**:
 
 1. **注意価値の判断経路**: 注意の経路は指示と意志の介在によって分岐する。
@@ -505,7 +551,6 @@ V_{att,\text{voluntary}} & \text{otherwise}
 3. **競合の条件依存性**: 定常的注意が意志的注意を圧倒するかは、個の集中力と期待Distに依存
 
 4. **指示のメカニズムの原理的不透明性**: 他者のB層3（個別信念）とC層6（クオリア）という二重の認識論的障壁により、指示の受容性 $\rho$ は完全には明確にできない。
-
 
 
 ### 4.3 テンソル構成要素の独立性根拠
@@ -570,7 +615,7 @@ $$C_n = f_{\text{qualia}}(A, \text{pastE}_n, E)$$
 
 > 時点 $n$ におけるクオリア（$C_n$）は、普遍的不可知（$A$）、過去の構造的制約（$\text{pastE}_n$）および局所的不可知（$E$）を引数とする関数（$f_{\text{qualia}}$）によって立ち現れる。
 
-同時に、暗黙的意味 $M_{\text{implicit}}$ が生成される。
+CによってAEより「価値」（この章で扱う）と「意味」 $M_{\text{implicit}}$ が同時に生成される。
 
 **重要**: $C_n$ はすでに pastE によって構造化されている。過去の社会通念、記憶、経験、物理的環境が、現在のクオリア生成を制約している。
 
@@ -604,11 +649,11 @@ $$\text{Dist}_{\text{Expect},\text{effective}} = |\text{Dist}_{\text{Expect},\te
 - 予測が正確 → 差が小さい → 驚きが小さい → 生じる注意が小さい
 - 予測なし・外れる → 差が大きい → 驚きが大きい → 生じる注意が大きい
 
-#### Phase 2: 原始的親和性
+#### Phase 2: 感覚的親和性
 
 $$V_{a,\text{primitive}} = (V_{a,\text{pos},\text{primitive}}, V_{a,\text{neg},\text{primitive}})$$
 
-両方が**同時に生成**される。
+生の親和極性の正負両方が**同時に生成**される。
 
 脳内メカニズム: 扁桃体レベルの生得的接近/回避反応
 
@@ -692,7 +737,7 @@ $$(V_{m,B}, V_{a,B}, V_{att,B}) = \text{Deliberate}(V_C, M_{\text{explicit}}, B_
 
 **思弁フェイズ完了**: $V_B = (V_{a,B}, V_{m,B}, V_{att,B})$
 
-
+---
 
 ## 6. 距離による価値の変調例
 
@@ -759,7 +804,6 @@ $$\kappa = -0.4$$
 
 「喉元過ぎれば熱さを忘れる」
 
----
 
 #### 6.1.1 想像による価値増幅
 
@@ -777,8 +821,6 @@ $$V_{a,\text{amplified}}(t) = (1 - \mu(t)) V_{a,\text{current}} + \mu(t) V_{a,\t
 
 - $t \to 0$: $V_a \to V_{a,\text{imagined}}$（想像が支配）
 - $t \to \infty$: $V_a \to V_{a,\text{current}}$（想像の影響消失）
-
----
 
 ### 6.2期待Distanceと時間Distanceの相乗効果
 
@@ -837,7 +879,7 @@ $$t = 1\text{日前}$$
 $$V_{m,B} = V_{m,C} \times \text{Correction}_{\text{factor}}$$
 $$V_{a,B} = V_{a,C} \times \text{Modulation}$$
 
----
+
 
 ### 7.2 間主観的価値の収束メカニズム
 
@@ -856,7 +898,7 @@ $$V_{a,B} = V_{a,C} \times \text{Modulation}$$
 
 → $V_{m,\text{consensus}}$ の変化 = 新しい価値の生成
 
----
+
 
 #### メカニズム2: グローバル→ローカル（集団が個別を変える）
 
@@ -869,7 +911,7 @@ $$V_{a,B} = V_{a,C} \times \text{Modulation}$$
    - パターンB: 「転向・穏健化」主体 $i$ が修正
    - パターンC: 「追放・投獄等」社会が排除
 
----
+
 
 #### メカニズム3: 弁証法的止揚（新価値の創発）
 
@@ -884,7 +926,7 @@ $$V_{a,B} = V_{a,C} \times \text{Modulation}$$
 - 文化B: 「集団の調和」= 10
 - 対話後: 「調和的自律」という新概念
 
----
+
 
 #### メカニズム4: 両論併置
 
@@ -898,7 +940,7 @@ $$V_{a,B} = V_{a,C} \times \text{Modulation}$$
 - 「コペンハーゲン解釈」= 10 vs 「多世界解釈」= 10
 - 対話後: 決着がつかず、両論が併置される
 
----
+
 
 #### 価値収束の動力学
 
@@ -977,7 +1019,7 @@ $$\lim_{t \to \infty} \text{Var}(V_{m,B,i}) = \text{平衡値}$$
 
 
 
-### 9.4 今後の展開
+### 8.4 今後の展開
 
 **理論的発展**:
 - Distance関数の具体形の確定（実証研究）
@@ -1001,7 +1043,7 @@ $$\lim_{t \to \infty} \text{Var}(V_{m,B,i}) = \text{平衡値}$$
 
 
 
-### 9.5 最終的結論
+### 8.5 最終的結論
 
 価値は、単なる主観的選好でもなければ、超越的なイデアでもない。価値は、**クオリアを根源とし、構造的に制約され、社会的に媒介される、動的で多層的な現象**である。
 
@@ -1015,26 +1057,51 @@ $$\lim_{t \to \infty} \text{Var}(V_{m,B,i}) = \text{平衡値}$$
 
 ## 付録
 
-### A. 数学的定式化の完全版
+### A. 数学的定式化
 
-**価値生成の完全プロセス**:
+**価値生成の基本プロセス**:
 
 $$
 \begin{align}
 &\text{Phase 0:} \quad C_n = f_{\text{qualia}}(A, \text{pastE}_n, E) \\
-&\text{Phase 1:} \quad \text{Dist}_{\text{Expect}}(t) = \begin{cases}
-d(C(t), C_{\text{baseline}}) & t \leq 0 \\
-d(C_{\text{imagined}}(t), C_{\text{current}}) & t > 0
-\end{cases} \\
+\\
+&\text{Phase 1-1:} \quad \text{Dist}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}}) \\
+&\quad\quad\quad\quad\quad C_{\text{baseline}} = \int C(\tau) e^{-\lambda(t-\tau)} d\tau \\
+\\
+&\text{Phase 1-2:} \quad \text{Dist}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}(t_{\text{future}}), C_{\text{current}}) \\
+&\quad\quad\quad\quad\quad C_{\text{imagined}} = \text{Imagine}(C_{\text{current}}, \text{pastE}, B_{\text{resources}}, t) \\
+\\
+&\text{Phase 1-3:} \quad \text{Dist}_{\text{Expect}} = |\text{Dist}_{\text{Expect},\text{retro}} - \text{Dist}_{\text{Expect},\text{anticip}}| \\
+\\
 &\text{Phase 2:} \quad V_{a,\text{primitive}} = (V_{a,\text{pos},\text{primitive}}, V_{a,\text{neg},\text{primitive}}) \\
+\\
 &\text{Phase 3:} \quad V_{m,\text{raw}} = |V_{a,\text{pos}}| + |V_{a,\text{neg}}| \\
+\\
 &\text{Phase 4:} \quad V_{m,C} = h(V_{m,\text{raw}}) \\
-&\text{Phase 5:} \quad V_{att,C} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cdot \text{Conflict} + \gamma \cdot \text{Dist}_{\text{Expect}}^k \\
+\\
+&\text{Phase 5:} \quad \text{Conflict} = \min(|V_{a,\text{pos}}|, |V_{a,\text{neg}}|) \\
+&\quad\quad\quad\quad\quad V_{att,\text{steady}} = V_{m,C} (1 + \alpha \cdot \text{Dist}_{\text{Expect}}) + \beta \cdot \text{Conflict} + \gamma \cdot \text{Dist}_{\text{Expect}}^k \\
+&\quad\quad\quad\quad\quad V_{att,\text{voluntary}} = \omega_C \cdot \text{Consciousness}_{\text{control}} \\
+&\quad\quad\quad\quad\quad V_{att,\text{final}} = \begin{cases}
+V_{att,\text{steady}} & \text{if } V_{att,\text{voluntary}} = 0 \\
+V_{att,\text{voluntary}} & \text{if } V_{att,\text{steady}} < \theta_{\text{override}} \\
+\max(V_{att,\text{steady}}, V_{att,\text{voluntary}}) & \text{otherwise}
+\end{cases} \\
+\\
 &\text{Phase 6:} \quad V_{a,\text{pos}}(t) = V_{a,\text{pos}}(0) \times e^{\kappa_{\text{pos}} t}, \quad V_{a,\text{neg}}(t) = V_{a,\text{neg}}(0) \times e^{\kappa_{\text{neg}} t} \\
-&\text{Phase 7:} \quad V_{a,i,\text{amplified}}(t) = (1 - \mu(t)) V_{a,i,\text{current}} + \mu(t) V_{a,i,\text{imagined}}(t) \\
+\\
+&\text{Phase 7:} \quad \mu(t) = \mu_{\max} \times e^{-\nu t} \\
+&\quad\quad\quad\quad\quad V_{a,i,\text{amplified}}(t) = (1 - \mu(t)) V_{a,i,\text{current}} + \mu(t) V_{a,i,\text{imagined}}(t) \\
+\\
 &\text{Phase 8:} \quad V_{a,i,\text{eff}} = V_{a,i,\text{amp}} \times \prod_j f_{i,j}(\text{Dist}_j) \\
-&\text{Phase 9:} \quad (V_{m,B}, V_{a,B}, V_{att,B}) = \text{Deliberate}(V_C, M, B_{\text{resources}}) \\
-&\text{Phase 10:} \quad \text{Fix}(V, M) \to \text{pastE}_{n+1} \to C_{n+1}
+&\quad\quad\quad\quad\quad V_{m,\text{eff}} = h(|V_{a,\text{pos},\text{eff}}| + |V_{a,\text{neg},\text{eff}}|) \\
+&\quad\quad\quad\quad\quad V_{att,\text{eff}} = V_{att,\text{final}} \times \prod_j h_j(\text{Dist}_j) \\
+\\
+&\text{Phase 9:} \quad \text{if } V_{m,\text{eff}} \geq \theta_{\text{conscious}}: \\
+&\quad\quad\quad\quad\quad M_{\text{explicit}} = \text{Linguistify}(M_{\text{implicit}}) \\
+&\quad\quad\quad\quad\quad (V_{m,B}, V_{a,B}, V_{att,B}) = \text{Deliberate}(V_C, M_{\text{explicit}}, B_{\text{resources}}) \\
+\\
+&\text{Phase 10:} \quad \text{Fix}(V, M) \to \text{pastE}_{n+1} \to C_{n+1} = f_{\text{qualia}}(A, \text{pastE}_{n+1}, E)
 \end{align}
 $$
 
@@ -1328,6 +1395,7 @@ Distance概念は、
 - Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
 - von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
 - Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
 
 
 
