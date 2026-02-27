@@ -406,7 +406,7 @@ $$\mathbf{V} = (V_a, V_m, V_{att})$$
 
 各成分を詳述する。
 
----
+
 
 #### 4.2.1 生への親和極性： $V_a$ (Valence of Affinity)
 
@@ -430,7 +430,7 @@ $$V_a = (V_{a,\text{pos}}, V_{a,\text{neg}})$$
 - **豪勢な食事**: $V_{a,\text{pos}} = +7$（食欲）、$V_{a,\text{neg}} \approx -3$（健康懸念有）
 - **日常的食事**: $V_{a,\text{pos}} = +5$（食欲）、$V_{a,\text{neg}} \approx 0$（健康懸念わずか）
 
----
+
 
 #### 4.2.2 価値強度： $V_m$ (Value Magnitude) 
 
