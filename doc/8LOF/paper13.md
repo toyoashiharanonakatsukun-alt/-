@@ -1395,6 +1395,74 @@ $$
 
 ---
 
+### A. 数学的定式化の完全版（修正案）
+
+**価値生成の完全プロセス**
+
+#### **【初期生成と期待誤差】**
+
+$\text{Phase 0}$（クオリア生成）から $\text{Phase 1}$（期待との乖離）のプロセスですわ。
+
+$$\text{Phase 0:} \quad C_n = f_{\text{qualia}}(A, \text{pastE}_n, E)$$
+
+$$\text{Phase 1-1:} \quad \text{Disc}_{\text{Expect},\text{retro}} = d(C_{\text{current}}, C_{\text{baseline}})$$
+
+$$\text{where} \quad C_{\text{baseline}} = \int C(\tau) e^{-\lambda(t-\tau)} d\tau$$
+
+$$\text{Phase 1-2:} \quad \text{Disc}_{\text{Expect},\text{anticip}} = d(C_{\text{imagined}}(t_{\text{future}}), C_{\text{current}})$$
+
+$$\text{where} \quad C_{\text{imagined}} = \text{Imagine}(C_{\text{current}}, \text{pastE}, B_{\text{resources}}, t)$$
+
+$$\text{Phase 1-3:} \quad \text{Disc}_{\text{Expect}} = |\text{Disc}_{\text{Expect},\text{retro}} - \text{Disc}_{\text{Expect},\text{anticip}}|$$
+
+#### **【価値強度と注意価値の定式化】**
+
+$\text{Phase 2}$ から $\text{Phase 5}$、価値が「注意」を引きつける力へと変換される核となる部分ですわ。
+
+$$\text{Phase 2:} \quad V_{a,\text{primitive}} = (V_{a,\text{pos},\text{primitive}}, V_{a,\text{neg},\text{primitive}})$$
+
+$$\text{Phase 3:} \quad V_{m,\text{raw}} = |V_{a,\text{pos}}| + |V_{a,\text{neg}}|$$
+
+$$\text{Phase 4:} \quad V_{m,C} = h(V_{m,\text{raw}})$$
+
+$$\text{Phase 5（注意の制御）:}$$
+
+$$\text{Conflict} = \min(|V_{a,\text{pos}}|, |V_{a,\text{neg}}|)$$
+
+$$V_{att,\text{steady}} = V_{m,C} (1 + \alpha \cdot \text{Disc}_{\text{Expect}}) + \beta \cdot \text{Conflict} + \gamma \cdot \text{Disc}_{\text{Expect}}^k$$
+
+$$V_{att,\text{final}} = \begin{cases} V_{att,\text{steady}} & \text{if } V_{att,\text{voluntary}} = 0 \\ V_{att,\text{voluntary}} & \text{if } V_{att,\text{steady}} < \theta_{\text{override}} \\ \max(V_{att,\text{steady}}, V_{att,\text{voluntary}}) & \text{otherwise} \end{cases}$$
+
+#### **【時間的変容と距離による減衰】**
+
+$\text{Phase 6}$ から $\text{Phase 8}$、価値が時空間を移動し、減衰していく動学的な部分ですわね。
+
+$$\text{Phase 6:} \quad V_{a,\text{pos}}(t) = V_{a,\text{pos}}(0) \times e^{\kappa_{\text{pos}} t}, \quad V_{a,\text{neg}}(t) = V_{a,\text{neg}}(0) \times e^{\kappa_{\text{neg}} t}$$
+
+$$\text{Phase 7:} \quad \mu(t) = \mu_{\max} \times e^{-\nu t}$$
+
+$$V_{a,i,\text{amplified}}(t) = (1 - \mu(t)) V_{a,i,\text{current}} + \mu(t) V_{a,i,\text{imagined}}(t)$$
+
+$$\text{Phase 8:} \quad V_{a,i,\text{eff}} = V_{a,i,\text{amp}} \times \prod_j f_{i,j}(\text{Dist}_j)$$
+
+$$V_{m,\text{eff}} = h(|V_{a,\text{pos},\text{eff}}| + |V_{a,\text{neg},\text{eff}}|)$$
+
+#### **【思弁と最終合意（Phase 9-11）】**
+
+感覚と理性が衝突し、最終的な行動価値が決定されるプロセスですわ。
+
+$$\text{Phase 11（最終スコアリング）:}$$
+
+$$\text{Score}_C = V_{m,\text{eff},C} \times W_{\text{urgency}} + \lambda_{\text{att}} \cdot V_{att,\text{final},C}$$
+
+$$\text{Score}_B = V_{m,B} \times W_{\text{reason}} + \lambda_{\text{att}} \cdot V_{att,B}$$
+
+$$V_{\text{final}} = \begin{cases} V_C & \text{if } \text{Score}_C > \text{Score}_B \\ V_B & \text{otherwise} \end{cases}$$
+
+---
+
+---
+
 **Phase 11の補足説明**:
 
 $$\text{Score}_C = V_{m,\text{eff},C} \times W_{\text{urgency}} + \lambda_{\text{att}} \cdot V_{att,\text{final},C}$$
