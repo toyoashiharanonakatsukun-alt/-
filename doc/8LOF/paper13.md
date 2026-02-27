@@ -1392,9 +1392,7 @@ $$\text{Score}_B = V_{m,B} \times W_{\text{reason}} + \lambda_{\text{att}} \cdot
 
 $$V_{\text{final}} = \begin{cases} V_C & \text{if } \text{Score}_C > \text{Score}_B \\ V_B & \text{otherwise} \end{cases}$$
 
----
-
----
+　
 
 **Phase 11の補足説明**:
 
