@@ -109,6 +109,8 @@ $$\text{Reality} = \text{BCD} \cup A \cup E$$
 
 A層とE層の対称性は、**普遍性の有無**によって規定される。A層は全ての生命に共通の不可知（論理法則など）であるのに対し、E層は物理座標や範囲を持つ局所的な不可知（個別の未知、過去の状態など）が分類される層である。
 
+詳細は(paper7,八層構造モデルによる形而上と形而下の接続構造の解明)。
+
 > クオリアは**主観的に可知かつ客観的に不可知**という二重性を持つ。
 
 > クオリアの真実・正体等は本論の主張と直接関係なく、例えクオリアが幻影や錯覚であろうと「主観的に自らの感覚の質が観測可能である事自体」を以て成立している。
@@ -1799,8 +1801,8 @@ Distance概念は、
 ## 参考文献
 
 **自著（Self-References）**
-- Nakatsu, M. (2025). _Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework_ (paper7)
-- Nakatsu, M. (2025). _Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia_ (paper10)
+- Nakatsu Mitsuhiro. (2025). _Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework_ (paper7)
+- Nakatsu Mitsuhiro. (2025). _Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia_ (paper10)
 
 ### 現象学・意識の哲学
 - Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
