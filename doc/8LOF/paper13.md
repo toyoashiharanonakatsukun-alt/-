@@ -1671,6 +1671,9 @@ Distance概念は、
 - Nakatsu Mitsuhiro. (2025). _Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework_ (paper7)
 - Nakatsu Mitsuhiro. (2025). _Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia_ (paper10)
 
+### 新実在論
+-Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+
 ### 現象学・意識の哲学
 - Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
 - Merleau-Ponty, M. (1945). *Phénoménologie de la perception*
