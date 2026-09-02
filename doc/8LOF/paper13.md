@@ -31,7 +31,7 @@ Date：02/2026
 
 #### 1.1.2 **価値の静的理解とその限界**
 
-長きにわたり、価値はしばしば静的なものとして把握されてきた。しかしそれは、価値そのものが不変であったからではない。むしろ、特定の文化圏において比較的安定していた社会的共有概念――すなわち限定された範囲のB相（本理論における意味・概念・社会関係の層）――が、その歴史的・地理的・文化的条件を忘却されたまま抽象化され、普遍的な価値概念として扱われてきた結果である。
+長きにわたり、価値はしばしば静的なものとして把握されてきた。しかしそれは、価値そのものが不変であったからではない。むしろ、特定の文化圏において比較的安定していた社会的共有概念――すなわち限定された範囲のB相（本理論における思弁・社会関係の層）――が、その歴史的・地理的・文化的条件を忘却されたまま抽象化され、普遍的な価値概念として扱われてきた結果である。
 
 古典から近代に至る価値論は、この安定したB相を暗黙の前提として成立しており、その前提が大きく揺らがない限り、価値を静的な構造として記述することが可能であった。しかし、グローバル化・技術革新・社会的分化が進行し、B相が動的かつ多層的に分岐する現代条件においては、この前提はもはや維持できない。
 
@@ -48,8 +48,6 @@ Date：02/2026
 3. **認識可能性の要請**: 価値は認識主体によって把握可能でなければならない。認識不能な「客観的価値」は、実践的に無意味である（神秘主義の陥穽）。
 
 従来の理論は、これらの要請のいずれかを犠牲にしてきた。功利主義は快楽という認識可能な基準を提示したが、質的な価値の多様性を捉えきれない。カント的義務論は普遍性を追求したが、具体的状況への適用が困難である。相対主義は多様性を認めたが、あらゆる価値判断を等価とし、評価の基準を失った。
-
-　
 
 本論文は、これら三つの要請を以下の方法で同時に達成する。
 
@@ -175,7 +173,7 @@ $$C_n \xrightarrow{\text{価値切り出し}} (V_n, M_n) \xrightarrow{\text{行�
 
 $$\text{AE}_{n+1} = A \oplus \text{pastE}_{n+1} \xrightarrow{} C_{n+1}$$
 
-> 現在のクオリア（$C_n$）から価値と意味（$V_n, M_n$）が切り出され、それに基づく行為や思弁を経て、新たな概念や物質的状態（$B_n, D_n$）が形成される。これらが確定（$\text{Fix}$）することで次時点の制約条件（$\text{pastE}_{n+1}$）へと移行する。 この新たな制約（$\text{pastE}_{n+1}$）と普遍的不可知（$A$）の排他的結合により次時点の不可知領域（$\text{AE}_{n+1}$）が構成され、それが次なるクオリア（$C_{n+1}$）を立ち上げるという、可知不可知の体系外部を必要としない自己完結的な循環構造を成す。
+> 現在のクオリア（$C_n$）から価値と意味（$V_n, M_n$）が切り出され、それに基づく行為や思弁を経て、新たな概念や物質的状態（$B_n, D_n$）が形成される。これらが確定（$\text{Fix}$）することで次時点の制約条件（$\text{pastE}_{n+1}$）へと移行する。 この新たな制約（$\text{pastE}_{n+1}$）と普遍的不可知（$A$）の排他的結合により次時点の不可知領域（$\text{AE}_{n+1}$）が構成され、それが次なるクオリア（$C_{n+1}$）を立ち上げるという、体系の外部を必要としない自己完結的な循環構造を成す。
 
 
 
@@ -183,7 +181,7 @@ $$\text{AE}_{n+1} = A \oplus \text{pastE}_{n+1} \xrightarrow{} C_{n+1}$$
 
 ## 3. 距離・誤差（Distance・Discrepancy）概念
 
-対象との遠近が問題になる場合はこの距離が近ければ近いほどに価値は増幅し、遠のけば遠のくほどに価値は減衰する。
+対象との遠近が問題になる場合は、この距離が近ければ近いほどに価値は増幅し、遠のけば遠のくほどに価値は減衰する。
 
 一方、予期や主体にとってのあるべき状態と現実の差が問題になる場合は、近いほど（差が小さい）に価値は減衰し、遠のく（差が大きい）ほどに価値は増幅する。
 
@@ -1431,6 +1429,50 @@ $$\rho(\text{instruction}) = f(B_{3,\text{self}}, B_4, B_5, \text{指示者と�
 
 ---
 
+## 参考文献
+
+**自著（Self-References）**
+- Nakatsu Mitsuhiro. (2025). _Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework_ (paper7)
+- Nakatsu Mitsuhiro. (2025). _Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia_ (paper10)
+
+### 新実在論
+-Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
+
+### 現象学・意識の哲学
+- Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
+- Merleau-Ponty, M. (1945). *Phénoménologie de la perception*
+- Chalmers, D. (1996). *The Conscious Mind*
+- Nagel, T. (1974). "What Is It Like to Be a Bat?" *Philosophical Review*
+
+### 価値論
+- Moore, G. E. (1903). *Principia Ethica*
+- Scheler, M. (1913). *Der Formalismus in der Ethik und die materiale Wertethik*
+- Perry, R. B. (1926). *General Theory of Value*
+- Anderson, E. (1993). *Value in Ethics and Economics*
+
+### 心理学・認知科学
+- Kahneman, D., & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk"
+- Damasio, A. (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*
+- LeDoux, J. (1996). *The Emotional Brain*
+- Slovic, P. (2007). "If I look at the mass I will never act: Psychic numbing and genocide"
+
+### 構造主義・ポスト構造主義
+- Lévi-Strauss, C. (1958). *Anthropologie structurale*
+- Foucault, M. (1966). *Les Mots et les choses*
+- Deleuze, G., & Guattari, F. (1980). *Mille Plateaux*
+
+### 数理・形式化
+- Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
+- von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
+- Fishburn, P. C. (1970). *Utility Theory for Decision Making*
+
+### 間主観性
+-Habermas, J. (1981). _Theorie des kommunikativen Handelns_. Suhrkamp.
+
+
+
+---
+
 ---
 
 ## 補遺：想定コメントへの先回り注釈（Q&A）
@@ -1678,45 +1720,7 @@ Distance概念は、
 
 ---
 
-## 参考文献
 
-**自著（Self-References）**
-- Nakatsu Mitsuhiro. (2025). _Structural Synthesis of Metaphysics and Physics: Elucidating the Interface through the 8-Layer Ontological Framework_ (paper7)
-- Nakatsu Mitsuhiro. (2025). _Structural Monism as an Ontological Foundation: Integrating Static Architecture and Dynamic Generation through Undifferentiated Qualia_ (paper10)
-
-### 新実在論
--Markus Gabriel, Warum es die Welt nicht gibt, Ullstein Verlag, 2013.（邦訳：マルクス・ガブリエル『なぜ世界は存在しないのか』講談社選書メチエ 666、2018年）
-
-### 現象学・意識の哲学
-- Husserl, E. (1913). *Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie*
-- Merleau-Ponty, M. (1945). *Phénoménologie de la perception*
-- Chalmers, D. (1996). *The Conscious Mind*
-- Nagel, T. (1974). "What Is It Like to Be a Bat?" *Philosophical Review*
-
-### 価値論
-- Moore, G. E. (1903). *Principia Ethica*
-- Scheler, M. (1913). *Der Formalismus in der Ethik und die materiale Wertethik*
-- Perry, R. B. (1926). *General Theory of Value*
-- Anderson, E. (1993). *Value in Ethics and Economics*
-
-### 心理学・認知科学
-- Kahneman, D., & Tversky, A. (1979). "Prospect Theory: An Analysis of Decision under Risk"
-- Damasio, A. (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*
-- LeDoux, J. (1996). *The Emotional Brain*
-- Slovic, P. (2007). "If I look at the mass I will never act: Psychic numbing and genocide"
-
-### 構造主義・ポスト構造主義
-- Lévi-Strauss, C. (1958). *Anthropologie structurale*
-- Foucault, M. (1966). *Les Mots et les choses*
-- Deleuze, G., & Guattari, F. (1980). *Mille Plateaux*
-
-### 数理・形式化
-- Luce, R. D., & Raiffa, H. (1957). *Games and Decisions*
-- von Neumann, J., & Morgenstern, O. (1944). *Theory of Games and Economic Behavior*
-- Fishburn, P. C. (1970). *Utility Theory for Decision Making*
-
-### 間主観性
--Habermas, J. (1981). _Theorie des kommunikativen Handelns_. Suhrkamp.
 
 
 
